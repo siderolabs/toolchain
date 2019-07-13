@@ -310,7 +310,7 @@ steps:
       cd build
       make install
       make -C ld clean
-      make -C ld LIB_PATH=/lib
+      make -C ld LIB_PATH=/usr/lib:/lib
       cp -v ld/ld-new ${TOOLCHAIN}/bin
 
   # gcc-stage-2
