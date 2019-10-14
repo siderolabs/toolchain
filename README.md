@@ -1,5 +1,7 @@
 # toolchain
 
+![Dependency Diagram](/deps.png)
+
 This repository produces a C toolchain with the following components:
 
 - binutils
