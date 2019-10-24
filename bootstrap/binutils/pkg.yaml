@@ -1,0 +1,31 @@
+name: bootstrap-binutils
+install:
+  - build-base
+steps:
+  - sources:
+      - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version }}.tar.xz
+        destination: binutils.tar.xz
+        sha256: "{{ .binutils_sha256 }}"
+        sha512: "{{ .binutils_sha512 }}"
+    prepare:
+      - |
+        tar -xJf binutils.tar.xz --strip-components=1
+        mkdir build
+        cd build
+        ../configure \
+        --build=${BUILD} \
+        --host=${HOST} \
+        --prefix={{ .BOOTSTRAP }} \
+        --disable-nls \
+        --disable-werror
+    build:
+      - |
+        cd build
+        make -j $(nproc)
+    install:
+      - |
+        cd build
+        make install
+finalize:
+  - from: "{{ .BOOTSTRAP }}"
+    to: "{{ .BOOTSTRAP }}"

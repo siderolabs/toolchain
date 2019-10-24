@@ -1,0 +1,44 @@
+name: binutils
+install:
+  - make
+dependencies:
+  - stage: bootstrap
+  - stage: musl
+steps:
+  - sources:
+      - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version }}.tar.xz
+        destination: binutils.tar.xz
+        sha256: "{{ .binutils_sha256 }}"
+        sha512: "{{ .binutils_sha512 }}"
+    env:
+      PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
+    prepare:
+      - |
+        tar -xJf binutils.tar.xz --strip-components=1
+
+        mkdir build
+        cd build
+
+        export CFLAGS="-I${TOOLCHAIN}/include"
+
+        ../configure \
+        --build=${BUILD} \
+        --host=${HOST} \
+        --prefix=${TOOLCHAIN} \
+        --with-lib-path=${TOOLCHAIN}/lib \
+        --disable-nls \
+        --disable-werror
+    build:
+      - |
+        cd build
+        make -j $(nproc)
+    install:
+      - |
+        cd build
+        make install
+        make -C ld clean
+        make -C ld LIB_PATH=/usr/lib:/lib
+        cp -v ld/ld-new ${TOOLCHAIN}/bin
+finalize:
+  - from: "{{ .TOOLCHAIN }}"
+    to: "{{ .TOOLCHAIN }}"
