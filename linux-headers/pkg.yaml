@@ -1,0 +1,44 @@
+name: linux-headers
+install:
+  - make
+dependencies:
+  - stage: bootstrap
+  - stage: musl
+steps:
+  - sources:
+      - url: https://cdn.kernel.org/pub/linux/kernel/{{ .linux_series }}/linux-{{ .linux_version }}.tar.xz
+        destination: linux.tar.xz
+        sha256: "{{ .linux_sha256 }}"
+        sha512: "{{ .linux_sha512 }}"
+    env:
+      PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
+    build:
+      - |
+        tar -xJf linux.tar.xz --strip-components=1
+
+        arch=""
+
+        case $ARCH in
+            x86_64)
+                arch="x86_64"
+            ;;
+            aarch64)
+                arch="arm64"
+            ;;
+            armv7)
+                arch="arm"
+            ;;
+            *)
+                echo "unsupported arch ${ARCH}"
+                exit 1
+            ;;
+        esac
+
+        make -j $(nproc) INSTALL_HDR_PATH=dest headers_install ARCH=${arch}
+    install:
+      - |
+        mkdir -p ${TOOLCHAIN}/include
+        cp -rv dest/include/* ${TOOLCHAIN}/include
+finalize:
+  - from: "{{ .TOOLCHAIN }}"
+    to: "{{ .TOOLCHAIN }}"
