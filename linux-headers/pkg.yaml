@@ -34,11 +34,13 @@ steps:
             ;;
         esac
 
-        make -j $(nproc) INSTALL_HDR_PATH=dest headers_install ARCH=${arch}
+        make -j $(nproc) headers ARCH=${arch}
+        find usr/include -name '.*' -delete
+        rm usr/include/Makefile
     install:
       - |
         mkdir -p ${TOOLCHAIN}/include
-        cp -rv dest/include/* ${TOOLCHAIN}/include
+        cp -rv usr/include/*  ${TOOLCHAIN}/include
 finalize:
   - from: "{{ .TOOLCHAIN }}"
     to: "{{ .TOOLCHAIN }}"
