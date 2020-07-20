@@ -1,4 +1,4 @@
-# syntax = docker.io/autonomy/bldr:v0.2.0-alpha.1-frontend
+# syntax = docker.io/autonomy/bldr:v0.2.0-alpha.2-frontend
 
 format: v1alpha2
 
