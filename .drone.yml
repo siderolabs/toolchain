@@ -1,13 +1,6 @@
 ---
-kind: secret
-name: kubeconfig
-
-get:
-  path: buildx
-  name: kubeconfig
-
----
 kind: pipeline
+type: kubernetes
 name: default
 
 steps:
@@ -20,6 +13,10 @@ steps:
     environment:
       SSH_KEY:
         from_secret: ssh_key
+    resources:
+      requests:
+        cpu: 24000
+        memory: 48GiB
     volumes:
       - name: docker-socket
         path: /var/run
@@ -78,6 +75,7 @@ volumes:
     temp: {}
 ---
 kind: pipeline
+type: kubernetes
 name: notify
 
 clone:
