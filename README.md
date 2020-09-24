@@ -21,7 +21,7 @@ At that point you can set you $PATH to `/toolchain/bin` and build source code in
 ## Development
 
 The development of this toolchain depends on Docker 19.03.0 or greater and [`bldr`](https://github.com/talos-systems/bldr).
-The toolchain can be built for different architectures (e.g. x86_86, aarch64, etc.).
+The toolchain can be built for different architectures (e.g. `x86_64`, `aarch64`, etc.).
 To do this you will need to setup the proper `docker context` for the architecture you intend on building for.
 For example, to setup the build for `aarch64` (`arm64`):
 
