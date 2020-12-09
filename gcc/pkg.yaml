@@ -66,6 +66,7 @@ steps:
         --disable-multilib \
         --disable-nls \
         --enable-shared \
+        --enable-plugin \
         --enable-languages=c,c++ \
         --enable-__cxa_atexit \
         --enable-c99 \
