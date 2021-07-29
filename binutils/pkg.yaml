@@ -27,7 +27,8 @@ steps:
         --prefix=${TOOLCHAIN} \
         --with-lib-path=${TOOLCHAIN}/lib \
         --disable-nls \
-        --disable-werror
+        --disable-werror \
+        --enable-deterministic-archives
     build:
       - |
         cd build

@@ -17,7 +17,8 @@ steps:
         --host=${HOST} \
         --prefix={{ .BOOTSTRAP }} \
         --disable-nls \
-        --disable-werror
+        --disable-werror \
+        --enable-deterministic-archives
     build:
       - |
         cd build
