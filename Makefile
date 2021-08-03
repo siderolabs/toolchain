@@ -7,7 +7,7 @@ REGISTRY_AND_USERNAME := $(REGISTRY)/$(USERNAME)
 
 # Sync bldr image with Pkgfile
 BLDR ?= docker run --rm --volume $(PWD):/toolchain --entrypoint=/bldr \
-	ghcr.io/talos-systems/bldr:v0.2.0-alpha.3-frontend graph --root=/toolchain
+	ghcr.io/talos-systems/bldr:v0.2.0-alpha.4-frontend graph --root=/toolchain
 
 BUILD := docker buildx build
 PLATFORM ?= linux/amd64,linux/arm64

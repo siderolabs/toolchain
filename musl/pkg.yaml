@@ -1,6 +1,7 @@
 name: musl
 install:
   - make
+  - patch
 dependencies:
   - stage: bootstrap
 steps:
