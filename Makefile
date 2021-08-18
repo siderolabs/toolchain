@@ -7,7 +7,7 @@ REGISTRY_AND_USERNAME := $(REGISTRY)/$(USERNAME)
 
 # Sync bldr image with Pkgfile
 BLDR ?= docker run --rm --volume $(PWD):/toolchain --entrypoint=/bldr \
-	ghcr.io/talos-systems/bldr:v0.2.0-alpha.4-frontend graph --root=/toolchain
+	ghcr.io/talos-systems/bldr:v0.2.0-alpha.5-frontend graph --root=/toolchain
 
 BUILD := docker buildx build
 PLATFORM ?= linux/amd64,linux/arm64
@@ -41,7 +41,8 @@ rebuild-%: ## Builds the specified target twice into $(DEST)/build-1/2 and compa
 	@$(MAKE) target-$* PROGRESS=plain TARGET_ARGS="--output=type=local,dest=$(DEST)/build-1 --no-cache $(TARGET_ARGS)" 2>&1 | tee $(DEST)/build-1.txt
 	@docker buildx prune --all --force
 	@$(MAKE) target-$* PROGRESS=plain TARGET_ARGS="--output=type=local,dest=$(DEST)/build-2 --no-cache $(TARGET_ARGS)" 2>&1 | tee $(DEST)/build-2.txt
-	@diff -qr _out/build-1 _out/build-2
+	@find _out/ -exec touch -ch -t 202108110000 {} \;
+	@diffoscope _out/build-1 _out/build-2
 
 docker-%: ## Builds the specified target defined in the Pkgfile using the docker output type. The build result will be loaded into Docker.
 	@$(MAKE) target-$* TARGET_ARGS="$(TARGET_ARGS)"
