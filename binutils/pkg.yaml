@@ -28,7 +28,8 @@ steps:
         --with-lib-path=${TOOLCHAIN}/lib \
         --disable-nls \
         --disable-werror \
-        --enable-deterministic-archives
+        --enable-deterministic-archives \
+        --enable-targets=aarch64-linux-musl,aarch64_be-linux-musl,i686-linux-musl,x86_64-linux-musl,x86_64-linux-muslx32,x86_64-pep
     build:
       - |
         cd build
