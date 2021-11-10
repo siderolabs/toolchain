@@ -1,6 +1,7 @@
 name: linux-headers
 install:
   - make
+  - patch
 dependencies:
   - stage: bootstrap
   - stage: musl
@@ -12,10 +13,13 @@ steps:
         sha512: "{{ .linux_sha512 }}"
     env:
       PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
-    build:
+    prepare:
       - |
         tar -xJf linux.tar.xz --strip-components=1
 
+        patch -p1 < /pkg/patches/stddef.h-instead-of-compiler.h.patch
+    build:
+      - |
         arch=""
 
         case $ARCH in
