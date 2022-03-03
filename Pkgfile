@@ -1,4 +1,4 @@
-# syntax = ghcr.io/talos-systems/bldr:v0.2.0-alpha.5-frontend
+# syntax = ghcr.io/talos-systems/bldr:v0.2.0-alpha.7-frontend
 
 format: v1alpha2
 
@@ -26,9 +26,9 @@ vars:
   mpc_sha512: 3279f813ab37f47fdcc800e4ac5f306417d07f539593ca715876e43e04896e1d5bceccfb288ef2908a3f24b760747d0dbd0392a24b9b341bc3e12082e5c836ee
 
   linux_series: v5.x
-  linux_version: 5.15.6
-  linux_sha256: b3e9ba06a299a3e2ead4a15753bc46a3e0c90d3b92ffeed1034ccc9f13a717f0
-  linux_sha512: 0f69e98590e796a3ec3e04340fc41954f1cdb7a5859da8efec1ba4a6498760778744e6243d068bc91343e3e7029239ff2e9ee2572f458c6b0e31c23f3686b5f5
+  linux_version: 5.15.26
+  linux_sha256: 58122134f2613fcbb200bb2399ef2117852166a8e11eed4b632a86b20b6bbe3a
+  linux_sha512: 3f66f997642ca0d9aa86f996657c81491201264e4b265a2085eba983b47e14b5483ebfdeb16548eec89a85ab4aae5fb4a2c3e14bd533017ed329723f53ba2bd2
 
   musl_version: 1.2.2
   musl_sha256: 9b969322012d796dc23dda27a35866034fa67d8fb67e0e2c45c913c3d43219dd
