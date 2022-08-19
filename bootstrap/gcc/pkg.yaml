@@ -31,7 +31,6 @@ steps:
         tar -xzf mpc.tar.gz --strip-components=1 -C mpc
 
         tar -xJf gcc.tar.xz --strip-components=1
-        patch -p1 < /pkg/patches/0046-c-avoid-memory-poisoning-on-musl-PR106102.patch
         mkdir build
         cd build
 
