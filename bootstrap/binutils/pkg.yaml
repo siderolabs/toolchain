@@ -1,9 +1,10 @@
 name: bootstrap-binutils
 install:
   - build-base
+  - texinfo
 steps:
   - sources:
-      - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version }}.tar.xz
+      - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version | replace "_" "." }}.tar.xz
         destination: binutils.tar.xz
         sha256: "{{ .binutils_sha256 }}"
         sha512: "{{ .binutils_sha512 }}"
@@ -17,6 +18,7 @@ steps:
         --host=${HOST} \
         --prefix={{ .BOOTSTRAP }} \
         --disable-nls \
+        --disable-gprofng \
         --disable-werror \
         --enable-deterministic-archives
     build:

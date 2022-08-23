@@ -1,12 +1,13 @@
 name: binutils
 install:
   - make
+  - texinfo
 dependencies:
   - stage: bootstrap
   - stage: musl
 steps:
   - sources:
-      - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version }}.tar.xz
+      - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version | replace "_" "." }}.tar.xz
         destination: binutils.tar.xz
         sha256: "{{ .binutils_sha256 }}"
         sha512: "{{ .binutils_sha512 }}"
@@ -27,6 +28,7 @@ steps:
         --prefix=${TOOLCHAIN} \
         --with-lib-path=${TOOLCHAIN}/lib \
         --disable-nls \
+        --disable-gprofng \
         --disable-werror \
         --enable-deterministic-archives \
         --enable-targets=aarch64-linux-musl,aarch64_be-linux-musl,i686-linux-musl,x86_64-linux-musl,x86_64-linux-muslx32,x86_64-pep
