@@ -32,5 +32,6 @@
     "schedule": [
         "on monday at 1am"
     ],
-    "timezone": "Etc/UTC"
+    "timezone": "Etc/UTC",
+    "dependencyDashboard": true
 }
