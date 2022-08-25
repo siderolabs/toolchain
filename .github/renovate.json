@@ -12,10 +12,11 @@
         },
         {
             "fileMatch": [
-                "Pkgfile"
+                "Pkgfile",
+                "Makefile"
             ],
             "matchStrings": [
-                "# syntax\\s+=\\s+(?<depName>ghcr.io\\/siderolabs\\/bldr):(?<currentValue>v.*)\\n"
+                "(?<depName>ghcr.io\\/siderolabs\\/bldr):(?<currentValue>v.*-frontend)"
             ],
             "datasourceTemplate": "docker",
             "versioningTemplate": "semver"
