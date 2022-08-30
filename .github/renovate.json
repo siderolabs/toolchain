@@ -1,5 +1,12 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        ":dependencyDashboard",
+        ":gitSignOff",
+        ":semanticCommitScopeDisabled",
+        "schedule:earlyMondays"
+    ],
+    "prHeader": "Update Request | Renovate Bot",
     "regexManagers": [
         {
             "fileMatch": [
@@ -28,11 +35,27 @@
                 "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git"
             ],
             "allowedVersions": "<= 5.15"
+        },
+        {
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "matchDatasources": [
+                "docker"
+            ],
+            "groupName": "container images"
+        },
+        {
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "matchDatasources": [
+                "git-refs",
+                "git-tags",
+                "github-tags",
+                "github-releases"
+            ],
+            "groupName": "releases"
         }
-    ],
-    "schedule": [
-        "on monday at 1am"
-    ],
-    "timezone": "Etc/UTC",
-    "dependencyDashboard": true
+    ]
 }
