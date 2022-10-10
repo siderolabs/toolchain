@@ -32,9 +32,9 @@ vars:
   mpc_sha512: 3279f813ab37f47fdcc800e4ac5f306417d07f539593ca715876e43e04896e1d5bceccfb288ef2908a3f24b760747d0dbd0392a24b9b341bc3e12082e5c836ee
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 5.15.68
-  linux_sha256: 17bbb3cb5c9ba18583b6679cc28f828aec49c72abbfc6fbde310b0cb17218b7e
-  linux_sha512: fa62e3061a84c7fe79eb69e7c4fd4bf77aebb11ace53fe2bc5a63629a99115d9c406992166ae84526d8854af57cd9cfd173191877ea6639a5fc3c2a60ab22931
+  linux_version: 5.15.72
+  linux_sha256: 6090323b5b471ae9d3bbc0058966113609f5bbd22fa19a76df32a8abc52f07ab
+  linux_sha512: c6288f664cdc02711382592493c84152f2139b8aa0cdee7d448c7aa75363028a1b7ade15414e7d9d42501f754a6d8eaeeb2dc663ae3b3cc95e9d0882d5aa8d1e
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.3
