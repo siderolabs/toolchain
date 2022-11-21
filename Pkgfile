@@ -16,9 +16,9 @@ vars:
   gcc_sha512: e9e857bd81bf7a370307d6848c81b2f5403db8c7b5207f54bce3f3faac3bde63445684092c2bc1a2427cddb6f7746496d9fbbef05fbbd77f2810b2998f1f9173
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpfr/mpfr.git
-  mpfr_version: 4.1.0
-  mpfr_sha256: 0c98a3f1732ff6ca4ea690552079da9c597872d30e96ec28414ee23c95558a7f
-  mpfr_sha512: 1bd1c349741a6529dfa53af4f0da8d49254b164ece8a46928cdb13a99460285622d57fe6f68cef19c6727b3f9daa25ddb3d7d65c201c8f387e421c7f7bee6273
+  mpfr_version: 4.1.1
+  mpfr_sha256: ffd195bd567dbaffc3b98b23fd00aad0537680c9896171e44fe3ff79e28ac33d
+  mpfr_sha512: be468749bd88870dec37be35e544983a8fb7bda638eb9414c37334b9d553099ea2aa067045f51ae2c8ab86d852ef833e18161d173e414af0928e9a438c9b91f1
 
   # official source code uses mercurial https://gmplib.org/devel/repo-usage, so falling back to a GitHub mirror,
   # renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=https://github.com/alisw/GMP.git
@@ -32,9 +32,9 @@ vars:
   mpc_sha512: 3279f813ab37f47fdcc800e4ac5f306417d07f539593ca715876e43e04896e1d5bceccfb288ef2908a3f24b760747d0dbd0392a24b9b341bc3e12082e5c836ee
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 5.15.77
-  linux_sha256: 142f841f33796a84c62fae2f2b96d2120bd8bbf9e0aac4ce157692cdb0afe9f9
-  linux_sha512: 3b557ad399606deb2e00077da7c57af534ff5bd395297db534a9c643ff6e95b29b315d15bcb453255875785264347949a7e52ef3a676b7dd12db10764a6a5646
+  linux_version: 5.15.79
+  linux_sha256: cba39031dbc0eed0785b8afdc8c58cf23df83e47001b2354fa44486ae699c154
+  linux_sha512: 5583f5fda70b2abe42212b254fe069f645845a0d664a806435acb898f87470ed25f6591810a406840a5a85479061aea6ed991cdfed29ca540b567d025e5d1326
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.3
