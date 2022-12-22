@@ -27,14 +27,14 @@ vars:
   gmp_sha512: c99be0950a1d05a0297d65641dd35b75b74466f7bf03c9e8a99895a3b2f9a0856cd17887738fa51cf7499781b65c049769271cbcb77d057d2e9f1ec52e07dd84
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
-  mpc_version: 1.3.0
-  mpc_sha256: 0e3b12181d37207230f5a7a7ddcfc22abfc5fc9c05825e1a65401a489a432a2a
-  mpc_sha512: 9c18b24f7542dc1dc5e10cf58fd242e73d79a9dc3619c3f08d52aed75ad0e7d9e2ba2c46857717c8b921b084af2efc8c0d2d7173081af764b81c24a8971ddd9a
+  mpc_version: 1.3.1
+  mpc_sha256: ab642492f5cf882b74aa0cb730cd410a81edcdbec895183ce930e706c1c759b8
+  mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 5.15.82
-  linux_sha256: fceef6bb79bac494663ccde34453521fc616cd94272fd30564752b3742381b65
-  linux_sha512: b0deb17077d9254e9a6eef853cdbcb7cbdde74cafef214d25961929d02a42fd61d306e3358b17a145999a0df3565c985de6149bd078330c63508ce8ce6fb4938
+  linux_version: 6.1.1
+  linux_sha256: a3e61377cf4435a9e2966b409a37a1056f6aaa59e561add9125a88e3c0971dfb
+  linux_sha512: c303f53ace62cf5b860934130fa5c34d2a43e7719959bcc3f2b7f0e753ecca550da4d0dc52409b6b6dc1c9c515cbab75427a15e51b58e9f8b1ce12982d82d629
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.3
