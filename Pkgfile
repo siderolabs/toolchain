@@ -21,7 +21,7 @@ vars:
   mpfr_sha512: be468749bd88870dec37be35e544983a8fb7bda638eb9414c37334b9d553099ea2aa067045f51ae2c8ab86d852ef833e18161d173e414af0928e9a438c9b91f1
 
   # official source code uses mercurial https://gmplib.org/devel/repo-usage, so falling back to a GitHub mirror,
-  # renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=https://github.com/alisw/GMP.git
+  # renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=https://github.com/alisw/gmp.git
   gmp_version: 6.2.1
   gmp_sha256: fd4829912cddd12f84181c3451cc752be224643e87fac497b69edddadc49b4f2
   gmp_sha512: c99be0950a1d05a0297d65641dd35b75b74466f7bf03c9e8a99895a3b2f9a0856cd17887738fa51cf7499781b65c049769271cbcb77d057d2e9f1ec52e07dd84
