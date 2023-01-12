@@ -16,8 +16,6 @@ steps:
     prepare:
       - |
         tar -xJf linux.tar.xz --strip-components=1
-
-        patch -p1 < /pkg/patches/stddef.h-instead-of-compiler.h.patch
     build:
       - |
         arch=""
