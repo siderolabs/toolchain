@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.2.0-alpha.11
+# syntax = ghcr.io/siderolabs/bldr:v0.2.0-alpha.12
 
 format: v1alpha2
 
@@ -6,9 +6,9 @@ vars:
   BOOTSTRAP: /bootstrap
 
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ versioning=loose depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_39
-  binutils_sha256: 645c25f563b8adc0a81dbd6a41cffbf4d37083a382e02d5d3df4f65c09516d00
-  binutils_sha512: 68e038f339a8c21faa19a57bbc447a51c817f47c2e06d740847c6e9cc3396c025d35d5369fa8c3f8b70414757c89f0e577939ddc0d70f283182504920f53b0a3
+  binutils_version: 2_40
+  binutils_sha256: 0f8a4c272d7f17f369ded10a4aca28b8e304828e95526da482b0ccc4dfc9d8e1
+  binutils_sha512: a37e042523bc46494d99d5637c3f3d8f9956d9477b748b3b1f6d7dfbb8d968ed52c932e88a4e946c6f77b8f48f1e1b360ca54c3d298f17193f3b4963472f6925
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
   gcc_version: 12.2.0
@@ -32,9 +32,9 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.1.5
-  linux_sha256: bc7f6d9a8a8bbe9a723e82346bba94b58d926f78bfba106b21e041e0290076fc
-  linux_sha512: f359a8ff3d2d4f1e95bd90431209fa17b7b37029a246b4fbadd618afb734f2e0385a21ebdc21c9fe6b5cc84876b34a59d7ae582c97c34cf29238231db4161275
+  linux_version: 6.1.7
+  linux_sha256: 4ab048bad2e7380d3b827f1fad5ad2d2fc4f2e80e1c604d85d1f8781debe600f
+  linux_sha512: 8b9bb3fbbea2d61314145cf6e4e1140372821a1e9ff79c4da363039c54fe73481106a5a85df0141dd449f4a21e946093a7430b14896b601c5a8b1f776107b35c
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.3
