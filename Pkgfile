@@ -5,10 +5,11 @@ format: v1alpha2
 vars:
   BOOTSTRAP: /bootstrap
 
+  # upgrade once pahole > 1.24 is released, fix is here: https://git.kernel.org/pub/scm/devel/pahole/pahole.git/commit/?h=next&id=bcc648a10cbcd0b96b84ff7c737d56ce70f7b501
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ versioning=loose depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_40
-  binutils_sha256: 0f8a4c272d7f17f369ded10a4aca28b8e304828e95526da482b0ccc4dfc9d8e1
-  binutils_sha512: a37e042523bc46494d99d5637c3f3d8f9956d9477b748b3b1f6d7dfbb8d968ed52c932e88a4e946c6f77b8f48f1e1b360ca54c3d298f17193f3b4963472f6925
+  binutils_version: 2_39
+  binutils_sha256: 645c25f563b8adc0a81dbd6a41cffbf4d37083a382e02d5d3df4f65c09516d00
+  binutils_sha512: 68e038f339a8c21faa19a57bbc447a51c817f47c2e06d740847c6e9cc3396c025d35d5369fa8c3f8b70414757c89f0e577939ddc0d70f283182504920f53b0a3
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
   gcc_version: 12.2.0
