@@ -10,8 +10,9 @@ REGISTRY_AND_USERNAME := $(REGISTRY)/$(USERNAME)
 SOURCE_DATE_EPOCH ?= "1559497065"
 
 # Sync bldr image with Pkgfile
+BLDR_IMAGE := ghcr.io/siderolabs/bldr:v0.2.0-alpha.12
 BLDR ?= docker run --rm --volume $(PWD):/toolchain --entrypoint=/bldr \
-	ghcr.io/siderolabs/bldr:v0.2.0-alpha.12 graph --root=/toolchain
+	$(BLDR_IMAGE) graph --root=/toolchain
 
 BUILD := docker buildx build
 PLATFORM ?= linux/amd64,linux/arm64
