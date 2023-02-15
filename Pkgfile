@@ -22,7 +22,7 @@ vars:
   mpfr_sha512: 58e843125884ca58837ae5159cd4092af09e8f21931a2efd19c15de057c9d1dc0753ae95c592e2ce59a727fbc491af776db8b00a055320413cdcf2033b90505c
 
   # official source code uses mercurial https://gmplib.org/devel/repo-usage, so falling back to a GitHub mirror,
-  # renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=https://github.com/alisw/gmp.git
+  # renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=alisw/gmp
   gmp_version: 6.2.1
   gmp_sha256: fd4829912cddd12f84181c3451cc752be224643e87fac497b69edddadc49b4f2
   gmp_sha512: c99be0950a1d05a0297d65641dd35b75b74466f7bf03c9e8a99895a3b2f9a0856cd17887738fa51cf7499781b65c049769271cbcb77d057d2e9f1ec52e07dd84
@@ -33,9 +33,9 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.1.11
-  linux_sha256: 581b0560077863c5116512c0b5fd93b97814092c80e6ebebabe88101949af7a1
-  linux_sha512: 5a2a61fa9f624fc9db70545c0e6f36ba714ce09e627f05bc0147c31d229e6308f6977d298271f38ece6e6099b99e3a25a7762a767c2123b83ec205574207a726
+  linux_version: 6.1.12
+  linux_sha256: d47aa675170904dcc93eeaa7c96db54d476a11c5d3e8cf3d3b96e364e2a0edea
+  linux_sha512: e870aa9038f0508c50af5329721a5649c3537deb333d18f006bbf6d3c310b64262630eed5682022b7eceece9ef0956d2c110555cc9257591b7a221d063976735
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.3
