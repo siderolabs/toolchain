@@ -5,11 +5,10 @@ format: v1alpha2
 vars:
   BOOTSTRAP: /bootstrap
 
-  # upgrade once pahole > 1.24 is released, fix is here: https://git.kernel.org/pub/scm/devel/pahole/pahole.git/commit/?h=next&id=bcc648a10cbcd0b96b84ff7c737d56ce70f7b501
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_39
-  binutils_sha256: 645c25f563b8adc0a81dbd6a41cffbf4d37083a382e02d5d3df4f65c09516d00
-  binutils_sha512: 68e038f339a8c21faa19a57bbc447a51c817f47c2e06d740847c6e9cc3396c025d35d5369fa8c3f8b70414757c89f0e577939ddc0d70f283182504920f53b0a3
+  binutils_version: 2_40
+  binutils_sha256: 0f8a4c272d7f17f369ded10a4aca28b8e304828e95526da482b0ccc4dfc9d8e1
+  binutils_sha512: a37e042523bc46494d99d5637c3f3d8f9956d9477b748b3b1f6d7dfbb8d968ed52c932e88a4e946c6f77b8f48f1e1b360ca54c3d298f17193f3b4963472f6925
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
   gcc_version: 12.2.0
@@ -33,9 +32,9 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.1.22
-  linux_sha256: 2be89141cef74d0e5a55540d203eb8010dfddb3c82d617e66b058f20b19cfda8
-  linux_sha512: 9db5360c85a2e8c7d1a3a37e0d79dafe3561566e098394a15e8cb48929a7afa74b203d3d67c286a8ddb4359a0ba8d45f33678219f9ccb8f728d1c4d4455fd27f
+  linux_version: 6.1.26
+  linux_sha256: dfdcc143a879d64a5ee99213b2b4b05b5dccd566c144df93bca1e204df64c110
+  linux_sha512: 342f2882189c82311b2abd8588bb8eb43fdcd7fd94d4168dd392c10c68be51a3a927c18b4b4fc45d8f56e3cdb2949ffa31a6e613182cdb24278d7f99e8ce8913
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.3
