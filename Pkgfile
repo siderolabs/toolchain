@@ -11,9 +11,9 @@ vars:
   binutils_sha512: a37e042523bc46494d99d5637c3f3d8f9956d9477b748b3b1f6d7dfbb8d968ed52c932e88a4e946c6f77b8f48f1e1b360ca54c3d298f17193f3b4963472f6925
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
-  gcc_version: 12.2.0
-  gcc_sha256: e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff
-  gcc_sha512: e9e857bd81bf7a370307d6848c81b2f5403db8c7b5207f54bce3f3faac3bde63445684092c2bc1a2427cddb6f7746496d9fbbef05fbbd77f2810b2998f1f9173
+  gcc_version: 12.3.0
+  gcc_sha256: 949a5d4f99e786421a93b532b22ffab5578de7321369975b91aec97adfda8c3b
+  gcc_sha512: 8fb799dfa2e5de5284edf8f821e3d40c2781e4c570f5adfdb1ca0671fcae3fb7f794ea783e80f01ec7bfbf912ca508e478bd749b2755c2c14e4055648146c204
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpfr/mpfr.git
   mpfr_version: 4.2.0
@@ -32,14 +32,14 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.1.26
-  linux_sha256: dfdcc143a879d64a5ee99213b2b4b05b5dccd566c144df93bca1e204df64c110
-  linux_sha512: 342f2882189c82311b2abd8588bb8eb43fdcd7fd94d4168dd392c10c68be51a3a927c18b4b4fc45d8f56e3cdb2949ffa31a6e613182cdb24278d7f99e8ce8913
+  linux_version: 6.1.27
+  linux_sha256: c2b74b96dd3d0cc9f300914ef7c4eef76d5fac9de6047961f49e69447ce9f905
+  linux_sha512: 657c241c8e4d62dabf7f1789c342352f757655129b8b21d92d3a90859d24f5f05f33aa39491851f690f7d9b0ba9234c47907ae05e1cb32a8d00fcf11ff71c61b
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
-  musl_version: 1.2.3
-  musl_sha256: 7d5b0b6062521e4627e099e4c9dc8248d32a30285e959b7eecaa780cf8cfd4a4
-  musl_sha512: 9332f713d3eb7de4369bc0327d99252275ee52abf523ee34b894b24a387f67579787f7c72a46cf652e090cffdb0bc3719a4e7b84dca66890b6a37f12e8ad089c
+  musl_version: 1.2.4
+  musl_sha256: 7a35eae33d5372a7c0da1188de798726f68825513b7ae3ebe97aaaa52114f039
+  musl_sha512: 498ec5d7941194a8806f4d42f0f6d218c862996ef1398b737d0d06995e0b7a6574b240a48088f6b84016b14b2776fe463f829dcb11149cdfc1023d496b235c55
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/toolchain
