@@ -43,6 +43,7 @@ steps:
         make -C ld clean
         make -C ld LIB_PATH=/usr/lib:/lib
         cp -v ld/ld-new ${TOOLCHAIN}/bin
+        rm -rf ${TOOLCHAIN}/share/man
 finalize:
   - from: "{{ .TOOLCHAIN }}"
     to: "{{ .TOOLCHAIN }}"
