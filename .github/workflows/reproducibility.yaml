@@ -1,20 +1,8 @@
-name: default
+name: reproducibility
 on:
-  push:
-    branches:
-      - main
-      - release-*
-    tags:
-      - v*
-  pull_request:
-    branches:
-      - main
-      - release-*
+  workflow_call:
 jobs:
   default:
-    if: ${{ !startsWith(github.head_ref, 'renovate/') }}
-    permissions:
-      packages: write
     runs-on:
       - self-hosted
       - pkgs
@@ -41,17 +29,6 @@ jobs:
           append: |
             - endpoint: tcp://buildkit-arm64.ci.svc.cluster.local:1234
               platforms: linux/arm64
-      - name: build
+      - name: reproducibility
         run: |
-          make
-      - name: Login to registry
-        if: github.event_name != 'pull_request'
-        uses: docker/login-action@v2
-        with:
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-      - name: Push to registry
-        if: github.event_name != 'pull_request'
-        run: |
-          make PUSH=true
+          make reproducibility-test
