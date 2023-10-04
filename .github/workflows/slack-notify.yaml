@@ -3,6 +3,8 @@ name: slack-notify
   workflow_run:
     workflows:
       - default
+      - weekly
+      - integration
     types:
       - completed
 jobs:

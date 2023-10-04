@@ -1,4 +1,7 @@
 name: default
+concurrency:
+  group: ${{ github.event.label == null && github.head_ref || github.run_id }}
+  cancel-in-progress: true
 on:
   push:
     branches:
@@ -10,9 +13,14 @@ on:
     branches:
       - main
       - release-*
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
 jobs:
   default:
-    if: ${{ !startsWith(github.head_ref, 'renovate/') }}
+    if: (!startsWith(github.head_ref, 'renovate/') && !startsWith(github.head_ref, 'dependabot/')) && (github.event.label == null || (contains(fromJSON('["integration/reproducibility"]'), github.event.label.name)))
     permissions:
       packages: write
     runs-on:
@@ -55,3 +63,36 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           make PUSH=true
+  reproducibility:
+    runs-on:
+      - self-hosted
+      - pkgs
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'integration/reproducibility') }}
+    needs:
+      - default
+    services:
+      buildkitd:
+        image: moby/buildkit:buildx-stable-1
+        ports:
+          - 1234:1234
+        options: --privileged
+        volumes:
+          - /var/lib/buildkit/${{ github.repository }}:/var/lib/buildkit
+          - /usr/etc/buildkit/buildkitd.toml:/etc/buildkit/buildkitd.toml
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Unshallow
+        run: |
+          git fetch --prune --unshallow
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: remote
+          endpoint: tcp://localhost:1234
+          append: |
+            - endpoint: tcp://buildkit-arm64.ci.svc.cluster.local:1234
+              platforms: linux/arm64
+      - name: reproducibility
+        run: |
+          make reproducibility-test
