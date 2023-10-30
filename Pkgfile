@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.2.2
+# syntax = ghcr.io/siderolabs/bldr:v0.2.3
 
 format: v1alpha2
 
@@ -6,9 +6,9 @@ vars:
   BOOTSTRAP: /bootstrap
 
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_40
-  binutils_sha256: 0f8a4c272d7f17f369ded10a4aca28b8e304828e95526da482b0ccc4dfc9d8e1
-  binutils_sha512: a37e042523bc46494d99d5637c3f3d8f9956d9477b748b3b1f6d7dfbb8d968ed52c932e88a4e946c6f77b8f48f1e1b360ca54c3d298f17193f3b4963472f6925
+  binutils_version: 2_41
+  binutils_sha256: ae9a5789e23459e59606e6714723f2d3ffc31c03174191ef0d015bdf06007450
+  binutils_sha512: 5df45d0bd6ddabdce4f35878c041e46a92deef01e7dea5facc97fd65cc06b59abc6fba0eb454b68e571c7e14038dc823fe7f2263843e6e627b7444eaf0fe9374
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
   gcc_version: 12.3.0
@@ -16,9 +16,9 @@ vars:
   gcc_sha512: 8fb799dfa2e5de5284edf8f821e3d40c2781e4c570f5adfdb1ca0671fcae3fb7f794ea783e80f01ec7bfbf912ca508e478bd749b2755c2c14e4055648146c204
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpfr/mpfr.git
-  mpfr_version: 4.2.0
-  mpfr_sha256: 06a378df13501248c1b2db5aa977a2c8126ae849a9d9b7be2546fb4a9c26d993
-  mpfr_sha512: 58e843125884ca58837ae5159cd4092af09e8f21931a2efd19c15de057c9d1dc0753ae95c592e2ce59a727fbc491af776db8b00a055320413cdcf2033b90505c
+  mpfr_version: 4.2.1
+  mpfr_sha256: 277807353a6726978996945af13e52829e3abd7a9a5b7fb2793894e18f1fcbb2
+  mpfr_sha512: bc68c0d755d5446403644833ecbb07e37360beca45f474297b5d5c40926df1efc3e2067eecffdf253f946288bcca39ca89b0613f545d46a9e767d1d4cf358475
 
   # official source code uses mercurial https://gmplib.org/devel/repo-usage, so falling back to a GitHub mirror,
   # renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=alisw/gmp
@@ -32,9 +32,9 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.1.42
-  linux_sha256: aaf8261b551c8b76b81eab8780b446e88cea4d551ae517ac3a9b2dbdbd381ed3
-  linux_sha512: b3a0c682bb2234c3ec36f6302f4b39dfd501e667c39d10e2f0994b3d3dfbdc461728686d4d451b798173a76fe2ae24d8a6ab43bf869e9291d1111975405db22c
+  linux_version: 6.1.60
+  linux_sha256: 58520e7ae5a6af254ddf7ddbfc42e4373b0d36c67d467f6e35a3bd1672f5fb0a
+  linux_sha512: cef40235428a09e5f7807a8be83af9a5ab90e841049a04f9f851e69e602aeab5a50f523cae5d5928d345c11b728608eba7754b173be0c023c7ee564cfaf4b20a
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.4
