@@ -11,7 +11,7 @@ vars:
   binutils_sha512: 5df45d0bd6ddabdce4f35878c041e46a92deef01e7dea5facc97fd65cc06b59abc6fba0eb454b68e571c7e14038dc823fe7f2263843e6e627b7444eaf0fe9374
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
-  gcc_version: 12.3.0
+  gcc_version: 13.2.0
   gcc_sha256: 949a5d4f99e786421a93b532b22ffab5578de7321369975b91aec97adfda8c3b
   gcc_sha512: 8fb799dfa2e5de5284edf8f821e3d40c2781e4c570f5adfdb1ca0671fcae3fb7f794ea783e80f01ec7bfbf912ca508e478bd749b2755c2c14e4055648146c204
 
