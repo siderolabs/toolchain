@@ -1,0 +1,6 @@
+---
+kind: pkgfile.Build
+spec:
+  targets:
+    - toolchain
+  reproducibleTargetName: toolchain
