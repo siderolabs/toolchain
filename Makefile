@@ -1,6 +1,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2023-11-27T17:15:55Z by kres latest.
+# Generated on 2023-11-27T18:10:07Z by kres latest.
 
 # common variables
 
@@ -16,7 +16,7 @@ ifeq ($(GOARCH),x86_64)
   GOARCH := amd64
 endif
 REGISTRY ?= ghcr.io
-USERNAME ?= talos-systems
+USERNAME ?= siderolabs
 REGISTRY_AND_USERNAME ?= $(REGISTRY)/$(USERNAME)
 KRES_IMAGE ?= ghcr.io/siderolabs/kres:latest
 CONFORMANCE_IMAGE ?= ghcr.io/siderolabs/conform:latest
