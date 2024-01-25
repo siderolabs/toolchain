@@ -71,7 +71,7 @@ jobs:
       - name: Retrieve PR labels
         id: retrieve-pr-labels
         if: github.event_name == 'pull_request' && always()
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           retries: "3"
           script: |
