@@ -6,7 +6,7 @@ vars:
   BOOTSTRAP: /bootstrap
 
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_41
+  binutils_version: 2_42
   binutils_sha256: ae9a5789e23459e59606e6714723f2d3ffc31c03174191ef0d015bdf06007450
   binutils_sha512: 5df45d0bd6ddabdce4f35878c041e46a92deef01e7dea5facc97fd65cc06b59abc6fba0eb454b68e571c7e14038dc823fe7f2263843e6e627b7444eaf0fe9374
 
