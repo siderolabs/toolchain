@@ -32,14 +32,14 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.6.13
-  linux_sha256: 88b89e7dd41ead4e3ab1e411c8bb8d592575acf815cf1df3c0dc57e2e882c0bc
-  linux_sha512: c1598bb1116528525004a677e571117d2b5156cf8f60c84f73e11d9010032b1fd5aaf8e5d286679019db55abb699c2f55de2dbb332c0a96f6337eebd56220863
+  linux_version: 6.6.18
+  linux_sha256: 4e43d8c5fba14f7c82597838011648056487b7550fd83276ad534559e8499b1d
+  linux_sha512: 7453d9ae753345e9312ad01da7805f68c1fb04f33aaec58ac3ba08e4b7af132c19e1822d8635fb747eb2d72cc8d89c89f3e5b7ff2e2207903cb2eb8b7dc5e884
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
-  musl_version: 1.2.4
-  musl_sha256: 7a35eae33d5372a7c0da1188de798726f68825513b7ae3ebe97aaaa52114f039
-  musl_sha512: 498ec5d7941194a8806f4d42f0f6d218c862996ef1398b737d0d06995e0b7a6574b240a48088f6b84016b14b2776fe463f829dcb11149cdfc1023d496b235c55
+  musl_version: 1.2.5
+  musl_sha256: a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4
+  musl_sha512: 7bb7f7833923cd69c7a1a9b8a5f1784bfd5289663eb6061dcd43d583e45987df8a68a1be05d75cc1c88a3f5b610653d1a70f4a9cff4d8f7fd41ae73ee058c17c
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/toolchain

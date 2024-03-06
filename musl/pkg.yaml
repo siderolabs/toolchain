@@ -16,8 +16,7 @@ steps:
       - |
         tar -xzf musl.tar.gz --strip-components=1
 
-        patch -p1 < /pkg/patches/revert-faccessat2.patch
-        patch -p1 < /pkg/patches/elf.h-add-typedefs.patch
+        patch -p1 < /pkg/patches/handle-aux-at-base.patch
 
         mkdir build
         cd build

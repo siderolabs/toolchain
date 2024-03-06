@@ -1,6 +1,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2023-11-27T18:10:07Z by kres latest.
+# Generated on 2024-03-06T10:13:48Z by kres latest.
 
 # common variables
 
@@ -45,6 +45,9 @@ COMMON_ARGS += --progress=$(PROGRESS)
 COMMON_ARGS += --platform=$(PLATFORM)
 COMMON_ARGS += --build-arg=SOURCE_DATE_EPOCH=$(SOURCE_DATE_EPOCH)
 
+# extra variables
+
+
 # targets defines all the available targets
 
 TARGETS = toolchain
@@ -70,6 +73,23 @@ To create a builder instance, run:
 
 	docker buildx create --name local --use
 
+If running builds that needs to be cached aggresively create a builder instance with the following:
+
+	docker buildx create --name local --use --config=config.toml
+
+config.toml contents:
+
+[worker.oci]
+  gc = true
+  gckeepstorage = 50000
+
+  [[worker.oci.gcpolicy]]
+    keepBytes = 10737418240
+    keepDuration = 604800
+    filters = [ "type==source.local", "type==exec.cachemount", "type==source.git.checkout"]
+  [[worker.oci.gcpolicy]]
+    all = true
+    keepBytes = 53687091200
 
 If you already have a compatible builder instance, you may use that instead.
 
