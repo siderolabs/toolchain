@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.2.3
+# syntax = ghcr.io/siderolabs/bldr:v0.3.0
 
 format: v1alpha2
 
@@ -6,9 +6,9 @@ vars:
   BOOTSTRAP: /bootstrap
 
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_41
-  binutils_sha256: ae9a5789e23459e59606e6714723f2d3ffc31c03174191ef0d015bdf06007450
-  binutils_sha512: 5df45d0bd6ddabdce4f35878c041e46a92deef01e7dea5facc97fd65cc06b59abc6fba0eb454b68e571c7e14038dc823fe7f2263843e6e627b7444eaf0fe9374
+  binutils_version: 2_42
+  binutils_sha256: f6e4d41fd5fc778b06b7891457b3620da5ecea1006c6a4a41ae998109f85a800
+  binutils_sha512: 155f3ba14cd220102f4f29a4f1e5cfee3c48aa03b74603460d05afb73c70d6657a9d87eee6eb88bf13203fe6f31177a5c9addc04384e956e7da8069c8ecd20a6
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
   gcc_version: 13.2.0
