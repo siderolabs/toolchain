@@ -76,6 +76,7 @@ steps:
         --enable-libstdcxx-time \
         --enable-checking=release \
         --enable-fully-dynamic-string \
+        --enable-default-pie \
         --disable-symvers \
         --disable-gnu-indirect-function \
         --disable-libmudflap \
