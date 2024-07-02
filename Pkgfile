@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.3.0
+# syntax = ghcr.io/siderolabs/bldr:v0.3.1
 
 format: v1alpha2
 
@@ -11,9 +11,9 @@ vars:
   binutils_sha512: 155f3ba14cd220102f4f29a4f1e5cfee3c48aa03b74603460d05afb73c70d6657a9d87eee6eb88bf13203fe6f31177a5c9addc04384e956e7da8069c8ecd20a6
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
-  gcc_version: 13.2.0
-  gcc_sha256: e275e76442a6067341a27f04c5c6b83d8613144004c0413528863dc6b5c743da
-  gcc_sha512: d99e4826a70db04504467e349e9fbaedaa5870766cda7c5cab50cdebedc4be755ebca5b789e1232a34a20be1a0b60097de9280efe47bdb71c73251e30b0862a2
+  gcc_version: 13.3.0
+  gcc_sha256: 0845e9621c9543a13f484e94584a49ffc0129970e9914624235fc1d061a0c083
+  gcc_sha512: ed5f2f4c6ed2c796fcf2c93707159e9dbd3ddb1ba063d549804dd68cdabbb6d550985ae1c8465ae9a336cfe29274a6eb0f42e21924360574ebd8e5d5c7c9a801
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpfr/mpfr.git
   mpfr_version: 4.2.1
@@ -32,9 +32,9 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.6.30
-  linux_sha256: b66a5b863b0f8669448b74ca83bd641a856f164b29956e539bbcb5fdeeab9cc6
-  linux_sha512: 1c1cb9449686fc334385e9997073503ac6312d6855e8ef26bb1e73267447cce14f1f0a22b5c585a0a3c6c8dd1ed0e3c246671773ab8990fdf3c2f081219a9212
+  linux_version: 6.6.36
+  linux_sha256: b9676828b737e8fb8eaa5198303d35d35e8df019550be153c8a42c99afe0cdd5
+  linux_sha512: 7dc497868b5b134eb2aa06e3e33aaae3c8026701ebea5b2183a35c0396576eda20f1d5af2d8468086fe0f9cf6691f2e3f3b3d6d03c5546bf734a8559cde5eabe
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.5
