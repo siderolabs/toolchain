@@ -55,7 +55,6 @@ steps:
         --host=${HOST} \
         --prefix={{ .BOOTSTRAP }} \
         --with-newlib \
-        --without-headers \
         --disable-bootstrap \
         --disable-nls \
         --disable-shared \

@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2024-08-27T16:11:17Z by kres 8e4bbb4.
+# Generated on 2024-10-23T10:57:38Z by kres 6d3cad4.
 
 set -e
 

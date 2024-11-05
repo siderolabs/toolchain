@@ -20,8 +20,6 @@ steps:
         mkdir build
         cd build
 
-        export CFLAGS="-I${TOOLCHAIN}/include"
-
         ../configure \
         --build=${BUILD} \
         --host=${HOST} \
