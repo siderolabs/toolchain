@@ -26,6 +26,11 @@ vars:
   gmp_sha256: fd4829912cddd12f84181c3451cc752be224643e87fac497b69edddadc49b4f2
   gmp_sha512: c99be0950a1d05a0297d65641dd35b75b74466f7bf03c9e8a99895a3b2f9a0856cd17887738fa51cf7499781b65c049769271cbcb77d057d2e9f1ec52e07dd84
 
+  # renovate: datasource=git-tags depName=git://git.savannah.gnu.org/make.git
+  make_version: 4.4.1
+  make_sha256: dd16fb1d67bfab79a72f5e8390735c49e3e8e70b4945a15ab1f81ddb78658fb3
+  make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
+
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
   mpc_version: 1.3.1
   mpc_sha256: ab642492f5cf882b74aa0cb730cd410a81edcdbec895183ce930e706c1c759b8

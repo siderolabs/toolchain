@@ -1,10 +1,10 @@
 name: linux-headers
 install:
-  - make
   - patch
 dependencies:
   - stage: bootstrap
   - stage: musl
+  - stage: make
 steps:
   - sources:
       - url: https://cdn.kernel.org/pub/linux/kernel/v{{ regexReplaceAll ".\\d+\\.\\d+$" .linux_version "${1}" }}.x/linux-{{ .linux_version }}.tar.xz

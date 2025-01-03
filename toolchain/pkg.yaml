@@ -4,6 +4,7 @@ dependencies:
   - stage: gcc
   - stage: linux-headers
   - stage: musl
+  - stage: make
 steps:
   - env:
       PATH: "{{ .TOOLCHAIN }}/bin:{{ .PATH }}"
