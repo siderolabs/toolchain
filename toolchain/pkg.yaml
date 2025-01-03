@@ -5,6 +5,7 @@ dependencies:
   - stage: linux-headers
   - stage: musl
   - stage: make
+  - stage: golang
 steps:
   - env:
       PATH: "{{ .TOOLCHAIN }}/bin:{{ .PATH }}"
