@@ -1,7 +1,0 @@
-name: bootstrap
-variant: scratch
-dependencies:
-  - stage: bootstrap-libstdcxx
-finalize:
-  - from: "{{ .BOOTSTRAP }}"
-    to: "{{ .BOOTSTRAP }}"

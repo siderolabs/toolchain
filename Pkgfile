@@ -3,8 +3,6 @@
 format: v1alpha2
 
 vars:
-  BOOTSTRAP: /bootstrap
-
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
   binutils_version: 2_43_1
   binutils_sha256: 13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
