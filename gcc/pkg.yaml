@@ -1,9 +1,12 @@
 name: gcc
-install:
-  - make
+variant: scratch
 dependencies:
-  - stage: bootstrap
-  - stage: musl
+  - image: "stagex/binutils@sha256:{{ .stagex_binutils_sha256 }}"
+  - image: "stagex/busybox@sha256:{{ .stagex_busybox_sha256 }}"
+  - image: "stagex/gcc@sha256:{{ .stagex_gcc_sha256 }}"
+  - image: "stagex/file@sha256:{{ .stagex_file_sha256 }}"
+  - image: "stagex/make@sha256:{{ .stagex_make_sha256 }}"
+  - image: "stagex/musl@sha256:{{ .stagex_musl_sha256 }}"
 steps:
   - sources:
       - url: https://ftp.gnu.org/gnu/gcc/gcc-{{ .gcc_version }}/gcc-{{ .gcc_version }}.tar.xz
@@ -22,8 +25,6 @@ steps:
         destination: mpc.tar.gz
         sha256: "{{ .mpc_sha256 }}"
         sha512: "{{ .mpc_sha512 }}"
-    env:
-      PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
     prepare:
       - |
         mkdir mpfr
@@ -41,28 +42,10 @@ steps:
 
         cat ../gcc/limitx.h ../gcc/glimits.h ../gcc/limity.h > `dirname $(gcc -print-libgcc-file-name)`/include-fixed/limits.h
 
-        for file in ../gcc/config/{aarch64/aarch64-linux,arm/{linux-eabi,linux-elf},linux,i386/linux{,64}}.h; do
-            cp -uv $file{,.orig}
-            sed -e "s@/lib\(64\)\?\(32\)\?/ld@${TOOLCHAIN}&@g" \
-            -e "s@/usr@${TOOLCHAIN}@g" $file.orig > $file
-            cat >> $file <<EOF
-        #undef STANDARD_STARTFILE_PREFIX_1
-        #undef STANDARD_STARTFILE_PREFIX_2
-        #define STANDARD_STARTFILE_PREFIX_1 "${TOOLCHAIN}/lib/"
-        #define STANDARD_STARTFILE_PREFIX_2 ""
-        EOF
-            touch $file.orig
-        done
-
-        sed -e '/m64=/s/lib64/lib/' -i.orig ../gcc/config/i386/t-linux64
-        sed -e '/mabi.lp64=/s/lib64/lib/' -i.orig ../gcc/config/aarch64/t-aarch64-linux
-
         ../configure \
         --build=${BUILD} \
         --host=${HOST} \
-        --prefix=${TOOLCHAIN} \
-        --with-local-prefix=${TOOLCHAIN} \
-        --with-native-system-header-dir=${TOOLCHAIN}/include \
+        --prefix=/usr \
         --disable-multilib \
         --disable-nls \
         --enable-shared \
@@ -92,8 +75,8 @@ steps:
     install:
       - |
         cd build
-        make install-strip
-        ln -sv gcc ${TOOLCHAIN}/bin/cc
+        make DESTDIR=/rootfs install-strip
+        ln -sv gcc /rootfs/usr/bin/cc
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /
