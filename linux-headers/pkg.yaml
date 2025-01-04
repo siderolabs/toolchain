@@ -40,8 +40,8 @@ steps:
         rm usr/include/Makefile
     install:
       - |
-        mkdir -p ${TOOLCHAIN}/include
-        cp -rv usr/include/*  ${TOOLCHAIN}/include
+        mkdir -p /rootfs/include
+        cp -rv usr/include/* /rootfs/include
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /
