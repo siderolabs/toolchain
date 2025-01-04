@@ -24,7 +24,7 @@ steps:
         ../configure \
         --build=${BUILD} \
         --host=${HOST} \
-        --prefix=${TOOLCHAIN} \
+        --prefix=/usr \
         --disable-nls \
         --disable-gprofng \
         --disable-werror \
@@ -37,11 +37,11 @@ steps:
     install:
       - |
         cd build
-        make install
+        make DESTDIR=/rootfs install
         make -C ld clean
         make -C ld LIB_PATH=/usr/lib:/lib
-        cp -v ld/ld-new ${TOOLCHAIN}/bin
-        rm -rf ${TOOLCHAIN}/share/man
+        cp -v ld/ld-new /rootfs/bin
+        rm -rf /rootfs/share/man
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /
