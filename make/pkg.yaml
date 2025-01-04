@@ -1,11 +1,7 @@
 name: make
 variant: scratch
 dependencies:
-  - image: "stagex/binutils@sha256:{{ .stagex_binutils_sha256 }}"
-  - image: "stagex/busybox@sha256:{{ .stagex_busybox_sha256 }}"
-  - image: "stagex/gcc@sha256:{{ .stagex_gcc_sha256 }}"
-  - image: "stagex/make@sha256:{{ .stagex_make_sha256 }}"
-  - image: "stagex/musl@sha256:{{ .stagex_musl_sha256 }}"
+  - stage: c
 steps:
   - sources:
       - url: https://ftp.gnu.org/gnu/make/make-{{ .make_version }}.tar.gz
