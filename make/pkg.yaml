@@ -18,7 +18,7 @@ steps:
         mkdir build
         cd build
         ../configure \
-            --prefix=${TOOLCHAIN} \
+            --prefix=/usr \
             --without-guile
     build:
       - |
@@ -27,7 +27,7 @@ steps:
     install:
       - |
         cd build
-        make install
+        make DESTDIR=/rootfs install
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /
