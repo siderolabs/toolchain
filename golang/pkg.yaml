@@ -12,7 +12,7 @@ steps:
 
     env:
       GOARCH: {{ if eq .ARCH "aarch64"}}arm64{{ else if eq .ARCH "x86_64" }}amd64{{ else }}unsupported{{ end }}
-      GOROOT_FINAL: '{{ .TOOLCHAIN }}/go'
+      GOROOT_FINAL: '/rootfs/go'
 
     prepare:
       - tar -xzf go.src.tar.gz --strip-components=1
@@ -44,5 +44,5 @@ steps:
       - mkdir -p "${GOROOT_FINAL}"
       - mv * "${GOROOT_FINAL}"
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /
