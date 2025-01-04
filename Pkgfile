@@ -51,5 +51,9 @@ vars:
   musl_sha256: a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4
   musl_sha512: 7bb7f7833923cd69c7a1a9b8a5f1784bfd5289663eb6061dcd43d583e45987df8a68a1be05d75cc1c88a3f5b610653d1a70f4a9cff4d8f7fd41ae73ee058c17c
 
+  # Stage(x) reproducibly built bootstrap toolchain. Please update when necessary to build newer toolchain
+  stagex_busybox_sha256: 3d128909dbc8e7b6c4b8c3c31f4583f01a307907ea179934bb42c4ef056c7efd
+  stagex_go_sha256: 6bb49db5a2d23cddcd9327933a4fcb6136882e72ec2be35730c06b1a420d7b17
+
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/toolchain
