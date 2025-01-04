@@ -15,6 +15,9 @@ steps:
         echo 'int main(){}' > dummy.c
         cc dummy.c
         ./a.out
+        echo -e 'package main\nfunc main() {}' > dummy.go
+        /go/bin/go build dummy.go
+        ./dummy
 finalize:
   - from: /
     to: /
