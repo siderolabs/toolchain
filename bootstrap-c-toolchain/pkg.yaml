@@ -1,0 +1,11 @@
+name: bootstrap-c-toolchain
+variant: scratch
+dependencies:
+  - image: "{{ .stagex_prefix }}/core-binutils:{{ .stagex_binutils_version }}@sha256:{{ .stagex_binutils_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-busybox:{{ .stagex_busybox_version }}@sha256:{{ .stagex_busybox_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-gcc:{{ .stagex_gcc_version }}@sha256:{{ .stagex_gcc_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-make:{{ .stagex_make_version }}@sha256:{{ .stagex_make_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-musl:{{ .stagex_musl_version }}@sha256:{{ .stagex_musl_sha256 }}"
+finalize:
+  - from: /
+    to: /

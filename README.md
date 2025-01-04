@@ -2,21 +2,19 @@
 
 ![Dependency Diagram](/deps.png)
 
-This repository produces a C toolchain with the following components:
+This repository produces a fully bootstrapped (using [\[Stageˣ\]](https://codeberg.org/stagex/stagex)) base toolchain with the following components:
 
+- busybox shell
 - binutils
-- linux headers
-- libstdc++
-- musl-libc
-- gcc
+- GCC
+- Linux headers
+- musl libc
+- GNU Make
+- Go
 
-The toolchain is configured to produce binaries with a search path set to `/toolchain/lib`.
-This allows for a clean separation from the host distribution on which the toolchain will be used.
+Currently, [a fork of \[Stageˣ\]](https://github.com/siderolabs/stagex) is used to provide multiplatform support.
 
-We suggest using this toolchain to create an intermediate rootfs with the tools required to build source code.
-For example, `make` can be built using this toolchain, and it will be installed to `/toolchain`.
-Once a complete set of binaries are built and installed to `/toolchain`, the original host is no longer required to build source code.
-At that point you can set you $PATH to `/toolchain/bin` and build source code independent of the host distribution.
+This toolchain should be capable of building all parts of Talos Linux without relying on tools other than image build tools.
 
 ## Development
 
@@ -50,3 +48,5 @@ make USERNAME=${DOCKER_HUB_USERNAME} PLATFORM=linux/arm64 PUSH=true
 - https://docs.docker.com/engine/security/https/#create-a-ca-server-and-client-keys-with-openssl
 - https://gcc.gnu.org/onlinedocs/gccint/Configure-Terms.html
 - https://wiki.osdev.org/Target_Triplet
+- https://stagex.tools
+- https://codeberg.org/stagex/stagex

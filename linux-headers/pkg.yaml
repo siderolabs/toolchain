@@ -1,18 +1,13 @@
 name: linux-headers
-install:
-  - patch
+variant: scratch
 dependencies:
-  - stage: bootstrap
-  - stage: musl
-  - stage: make
+  - stage: bootstrap-c-toolchain
 steps:
   - sources:
       - url: https://cdn.kernel.org/pub/linux/kernel/v{{ regexReplaceAll ".\\d+\\.\\d+$" .linux_version "${1}" }}.x/linux-{{ .linux_version }}.tar.xz
         destination: linux.tar.xz
         sha256: "{{ .linux_sha256 }}"
         sha512: "{{ .linux_sha512 }}"
-    env:
-      PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
     prepare:
       - |
         tar -xJf linux.tar.xz --strip-components=1
@@ -41,8 +36,8 @@ steps:
         rm usr/include/Makefile
     install:
       - |
-        mkdir -p ${TOOLCHAIN}/include
-        cp -rv usr/include/*  ${TOOLCHAIN}/include
+        mkdir -p /rootfs/include
+        cp -rv usr/include/* /rootfs/include
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /

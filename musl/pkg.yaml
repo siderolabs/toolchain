@@ -1,9 +1,8 @@
 name: musl
-install:
-  - make
-  - patch
+variant: scratch
 dependencies:
-  - stage: bootstrap
+  - stage: bootstrap-c-toolchain
+  - image: "{{ .stagex_prefix }}/core-diffutils:{{ .stagex_diffutils_version }}@sha256:{{ .stagex_diffutils_sha256 }}"
 steps:
   - sources:
       - url: https://www.musl-libc.org/releases/musl-{{ .musl_version }}.tar.gz
@@ -11,7 +10,6 @@ steps:
         sha256: "{{ .musl_sha256 }}"
         sha512: "{{ .musl_sha512 }}"
     env:
-      PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
       # disable any optimizations, as musl does its own
       CFLAGS: ""
       CXXFLAGS: ""
@@ -26,9 +24,7 @@ steps:
         mkdir build
         cd build
 
-        ../configure \
-        --prefix=${TOOLCHAIN} \
-        --syslibdir=${TOOLCHAIN}/lib
+        ../configure --prefix=/usr
     build:
       - |
         cd build
@@ -36,13 +32,7 @@ steps:
     install:
       - |
         cd build
-        make install
-    test:
-      - |
-        echo 'int main(){}' > dummy.c
-
-        gcc dummy.c
-        readelf -l a.out | grep ": ${TOOLCHAIN}"
+        make DESTDIR=/rootfs install
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /

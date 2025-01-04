@@ -1,47 +1,34 @@
 name: binutils
-install:
-  - make
-  - texinfo
+variant: scratch
 dependencies:
-  - stage: bootstrap
-  - stage: musl
+  - stage: bootstrap-c-toolchain
 steps:
   - sources:
       - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version | replace "_" "." }}.tar.xz
         destination: binutils.tar.xz
         sha256: "{{ .binutils_sha256 }}"
         sha512: "{{ .binutils_sha512 }}"
-    env:
-      PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
     prepare:
       - |
         tar -xJf binutils.tar.xz --strip-components=1
 
-        mkdir build
-        cd build
-
-        ../configure \
+        ./configure \
         --build=${BUILD} \
         --host=${HOST} \
-        --prefix=${TOOLCHAIN} \
-        --with-lib-path=${TOOLCHAIN}/lib \
+        --prefix=/usr \
         --disable-nls \
+        --disable-gdb \
         --disable-gprofng \
         --disable-werror \
         --enable-deterministic-archives \
         --enable-targets=aarch64-linux-musl,aarch64_be-linux-musl,i686-linux-musl,x86_64-linux-musl,x86_64-linux-muslx32,x86_64-pep
     build:
       - |
-        cd build
         make -j $(nproc)
     install:
       - |
-        cd build
-        make install
-        make -C ld clean
-        make -C ld LIB_PATH=/usr/lib:/lib
-        cp -v ld/ld-new ${TOOLCHAIN}/bin
-        rm -rf ${TOOLCHAIN}/share/man
+        make DESTDIR=/rootfs install
+        rm -r /rootfs/usr/share/man
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /

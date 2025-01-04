@@ -1,10 +1,8 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.3.2
+# syntax = ghcr.io/siderolabs/bldr:v0.4.0
 
 format: v1alpha2
 
 vars:
-  BOOTSTRAP: /bootstrap
-
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
   binutils_version: 2_43_1
   binutils_sha256: 13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
@@ -50,6 +48,23 @@ vars:
   musl_version: 1.2.5
   musl_sha256: a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4
   musl_sha512: 7bb7f7833923cd69c7a1a9b8a5f1784bfd5289663eb6061dcd43d583e45987df8a68a1be05d75cc1c88a3f5b610653d1a70f4a9cff4d8f7fd41ae73ee058c17c
+
+  # Stage(x) reproducibly built bootstrap toolchain. Please update when necessary to build newer toolchain
+  stagex_prefix: ghcr.io/siderolabs/stagex
+  stagex_binutils_sha256: b4c8c1b077ed483885db0d7d29c9a6efa574cda71629970f0c753f51ef0046ee
+  stagex_binutils_version: 2.43.1
+  stagex_busybox_sha256: c0b551b47d8f1ac2fd5f4712eafddb8717e6e563a47203e02f94f944f64c18b2
+  stagex_busybox_version: 1.36.1
+  stagex_diffutils_sha256: 697119e6231be9c3e3dcd5c6f04cb8bfdf9178a86ce03433d0f442793b6ac43d
+  stagex_diffutils_version: 3.10
+  stagex_gcc_sha256: e56482e2e72b892a2c7faa9ef6ba2b37506695990aa139aa8fa8c1b2e90e5117
+  stagex_gcc_version: 13.1.0
+  stagex_go_sha256: 0298fd82defbb8266a6dd44024ca484c22a6e89226ad9b1a6c1fb9eea9258abd
+  stagex_go_version: 1.23.5
+  stagex_make_sha256: e36f3612c4788a3ff17312a3480228ae7b8edb2cdcba577fe3cc3db1ed5a4ee8
+  stagex_make_version: 4.4
+  stagex_musl_sha256: 63f3f84b0ff9827cf4345c722b562ede24fbe61e4ea28ffa9e6d12a3dfe8b90e
+  stagex_musl_version: 1.2.4
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/toolchain

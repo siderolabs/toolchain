@@ -1,8 +1,8 @@
 name: golang
-install:
-  - go
+variant: scratch
 dependencies:
-  - stage: binutils
+  - image: "{{ .stagex_prefix }}/core-busybox:{{ .stagex_busybox_version }}@sha256:{{ .stagex_busybox_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-go:{{ .stagex_go_version }}@sha256:{{ .stagex_go_sha256 }}"
 steps:
   - sources:
       - url: https://dl.google.com/go/go{{ .golang_version }}.src.tar.gz
@@ -11,7 +11,7 @@ steps:
         sha512: "{{ .golang_sha512 }}"
 
     env:
-      GOROOT_FINAL: '{{ .TOOLCHAIN }}/go'
+      GOROOT_FINAL: '/rootfs/go'
 
     prepare:
       - tar -xzf go.src.tar.gz --strip-components=1
@@ -36,5 +36,5 @@ steps:
       - mkdir -p "${GOROOT_FINAL}"
       - mv * "${GOROOT_FINAL}"
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /rootfs
+    to: /

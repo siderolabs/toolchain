@@ -1,20 +1,23 @@
 name: toolchain
+variant: scratch
 dependencies:
+  - image: "{{ .stagex_prefix }}/core-busybox:{{ .stagex_busybox_version }}@sha256:{{ .stagex_busybox_sha256 }}"
   - stage: binutils
   - stage: gcc
   - stage: linux-headers
   - stage: musl
   - stage: make
   - stage: golang
-steps:
-  - env:
-      PATH: "{{ .TOOLCHAIN }}/bin:{{ .PATH }}"
-    test:
-      - |
-        echo 'int main(){}' > dummy.c
-        cc dummy.c
-        readelf -l a.out | grep ": ${TOOLCHAIN}"
-        ./a.out
+# TODO: run this test once we figure out the best way to not let temporary files into the final image
+# steps:
+#   - test:
+#     - |
+#       echo 'int main(){}' > dummy.c
+#       cc dummy.c
+#       ./a.out
+#       echo -e 'package main\nfunc main() {}' > dummy.go
+#       /go/bin/go build dummy.go
+#       ./dummy
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /
+    to: /
