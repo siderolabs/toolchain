@@ -1,18 +1,19 @@
 name: binutils
-install:
-  - make
-  - texinfo
+variant: scratch
 dependencies:
-  - stage: bootstrap
-  - stage: musl
+  - image: "stagex/binutils@sha256:{{ .stagex_binutils_sha256 }}"
+  - image: "stagex/busybox@sha256:{{ .stagex_busybox_sha256 }}"
+  - image: "stagex/gcc@sha256:{{ .stagex_gcc_sha256 }}"
+  - image: "stagex/make@sha256:{{ .stagex_make_sha256 }}"
+  - image: "stagex/musl@sha256:{{ .stagex_musl_sha256 }}"
+  - image: "stagex/perl@sha256:{{ .stagex_perl_sha256 }}"
+  - image: "stagex/texinfo@sha256:{{ .stagex_texinfo_sha256 }}"
 steps:
   - sources:
       - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version | replace "_" "." }}.tar.xz
         destination: binutils.tar.xz
         sha256: "{{ .binutils_sha256 }}"
         sha512: "{{ .binutils_sha512 }}"
-    env:
-      PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
     prepare:
       - |
         tar -xJf binutils.tar.xz --strip-components=1
@@ -24,7 +25,6 @@ steps:
         --build=${BUILD} \
         --host=${HOST} \
         --prefix=${TOOLCHAIN} \
-        --with-lib-path=${TOOLCHAIN}/lib \
         --disable-nls \
         --disable-gprofng \
         --disable-werror \
