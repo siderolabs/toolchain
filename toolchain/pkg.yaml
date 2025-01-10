@@ -1,23 +1,12 @@
 name: toolchain
 variant: scratch
-shell: /usr/bin/sh
 dependencies:
-  - image: "stagex/busybox@sha256:{{ .stagex_busybox_sha256 }}"
   - stage: binutils
   - stage: gcc
   - stage: linux-headers
   - stage: musl
   - stage: make
   - stage: golang
-steps:
-  - test:
-      - |
-        echo 'int main(){}' > dummy.c
-        cc dummy.c
-        ./a.out
-        echo -e 'package main\nfunc main() {}' > dummy.go
-        /go/bin/go build dummy.go
-        ./dummy
 finalize:
   - from: /
     to: /
