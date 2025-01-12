@@ -2,7 +2,6 @@ name: gcc
 variant: scratch
 dependencies:
   - stage: c
-  - image: "stagex/file@sha256:{{ .stagex_file_sha256 }}"
 steps:
   - sources:
       - url: https://ftp.gnu.org/gnu/gcc/gcc-{{ .gcc_version }}/gcc-{{ .gcc_version }}.tar.xz
