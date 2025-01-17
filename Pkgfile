@@ -32,9 +32,9 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.23.4
-  golang_sha256: ad345ac421e90814293a9699cca19dd5238251c3f687980bbcae28495b263531
-  golang_sha512: 5d1cce76b2cbdf628f86a1a8185a07f362becee053cb4270281520e77b36e3908faeaf5b2a6266e61dec9866dc1f3791f77e8dc1bf5f8beaf858c138d0e18c22
+  golang_version: 1.23.5
+  golang_sha256: a6f3f4bbd3e6bdd626f79b668f212fbb5649daf75084fb79b678a0ae4d97423b
+  golang_sha512: b04317afeab2d0ced7c36b8682dd32ac085d95d874cf3f614daa34859d7f7f2b75138132e7a64e237c6b4d711d5b03a4d20533f92a44840915630f4ea7cfafa2
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
   mpc_version: 1.3.1
