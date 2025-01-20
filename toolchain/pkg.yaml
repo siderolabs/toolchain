@@ -1,4 +1,5 @@
 name: toolchain
+variant: scratch
 dependencies:
   - stage: binutils
   - stage: gcc
@@ -6,15 +7,6 @@ dependencies:
   - stage: musl
   - stage: make
   - stage: golang
-steps:
-  - env:
-      PATH: "{{ .TOOLCHAIN }}/bin:{{ .PATH }}"
-    test:
-      - |
-        echo 'int main(){}' > dummy.c
-        cc dummy.c
-        readelf -l a.out | grep ": ${TOOLCHAIN}"
-        ./a.out
 finalize:
-  - from: "{{ .TOOLCHAIN }}"
-    to: "{{ .TOOLCHAIN }}"
+  - from: /
+    to: /

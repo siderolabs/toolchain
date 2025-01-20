@@ -3,8 +3,6 @@
 format: v1alpha2
 
 vars:
-  BOOTSTRAP: /bootstrap
-
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
   binutils_version: 2_43_1
   binutils_sha256: 13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
@@ -50,6 +48,18 @@ vars:
   musl_version: 1.2.5
   musl_sha256: a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4
   musl_sha512: 7bb7f7833923cd69c7a1a9b8a5f1784bfd5289663eb6061dcd43d583e45987df8a68a1be05d75cc1c88a3f5b610653d1a70f4a9cff4d8f7fd41ae73ee058c17c
+
+  # Stage(x) reproducibly built bootstrap toolchain. Please update when necessary to build newer toolchain
+  stagex_binutils_sha256: eff721a796fdfba8c34e21a487b0e376fb55ca2633524926998f1660fbb810de
+  stagex_busybox_sha256: 3d128909dbc8e7b6c4b8c3c31f4583f01a307907ea179934bb42c4ef056c7efd
+  stagex_diffutils_sha256: df935bd3df054427c559c5008f2e5de12419725c1331d1f863380a6015a1d0e2
+  stagex_file_sha256: f1053114ea2ef35dc04bd1d1f1572c3f1b86e3d57dffda99faac9e191bd7ab5d
+  stagex_gcc_sha256: 49ea63c81c65f8be25c242b7e64f2758b23effdaafb458b5862d0f23ec803075
+  stagex_go_sha256: 6bb49db5a2d23cddcd9327933a4fcb6136882e72ec2be35730c06b1a420d7b17
+  stagex_make_sha256: ad81793d21d9778421925085c52734fdcca443957ade4f9bb80e4032b88252db
+  stagex_musl_sha256: d7f6c365f5724c65cadb2b96d9f594e46132ceb366174c89dbf7554897f2bc53
+  stagex_perl_sha256: 5fd2b41b5541b1b5de887f1cd47c56f3c59a268fa08096661eeff111d147234c
+  stagex_texinfo_sha256: ddaf6c83f6577335813eafcd601c9d0ffb698ebb991e9203eeb95d0122b45116
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/toolchain
