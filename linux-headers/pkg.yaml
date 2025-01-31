@@ -36,8 +36,8 @@ steps:
         rm usr/include/Makefile
     install:
       - |
-        mkdir -p /rootfs/include
-        cp -rv usr/include/* /rootfs/include
+        mkdir -p /rootfs/usr/include
+        cp -rv usr/include/* /rootfs/usr/include
 finalize:
   - from: /rootfs
     to: /
