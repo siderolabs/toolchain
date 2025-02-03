@@ -41,6 +41,7 @@ steps:
         --build=${BUILD} \
         --host=${HOST} \
         --prefix=/usr \
+        --libdir=/usr/lib \
         --disable-multilib \
         --disable-nls \
         --enable-shared \
@@ -72,6 +73,8 @@ steps:
         cd build
         make DESTDIR=/rootfs install-strip
         ln -sv gcc /rootfs/usr/bin/cc
+        mv /rootfs/usr/lib64/* /rootfs/usr/lib/
+        rm -rf /rootfs/usr/lib64
 finalize:
   - from: /rootfs
     to: /

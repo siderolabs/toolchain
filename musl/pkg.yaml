@@ -33,6 +33,13 @@ steps:
       - |
         cd build
         make DESTDIR=/rootfs install
+        ARCH=$(uname -m)
+        mkdir -p /rootfs/usr/bin /rootfs/usr/lib
+        rm -rf /rootfs/lib
+        ln -sf /usr/lib/ld-musl-${ARCH}.so.1 /rootfs/usr/bin/ldd
+        mv -f /rootfs/usr/lib/libc.so /rootfs/usr/lib/ld-musl-${ARCH}.so.1
+        ln -sf ld-musl-${ARCH}.so.1 /rootfs/usr/lib/libc.musl-${ARCH}.so.1
+        ln -sf /usr/lib/ld-musl-${ARCH}.so.1 /rootfs/usr/lib/libc.so
 finalize:
   - from: /rootfs
     to: /
