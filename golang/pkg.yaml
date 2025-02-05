@@ -35,6 +35,9 @@ steps:
 
       - mkdir -p "${GOROOT_FINAL}"
       - mv * "${GOROOT_FINAL}"
+      - mkdir -p /rootfs/usr/bin
+      - ln -s /go/bin/go /rootfs/usr/bin/go
+      - ln -s /go/bin/gofmt /rootfs/usr/bin/gofmt
 finalize:
   - from: /rootfs
     to: /
