@@ -3,6 +3,7 @@ kind: pkgfile.Build
 spec:
   targets:
     - toolchain
+    - toolchain-musl
   reproducibleTargetName: toolchain
 ---
 kind: common.Renovate

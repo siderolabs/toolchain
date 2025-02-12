@@ -1,4 +1,4 @@
-name: musl
+name: toolchain-musl
 variant: scratch
 dependencies:
   - stage: bootstrap-c-toolchain

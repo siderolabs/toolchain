@@ -1,12 +1,12 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.4.0
+# syntax = ghcr.io/siderolabs/bldr:v0.4.1
 
 format: v1alpha2
 
 vars:
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_43_1
-  binutils_sha256: 13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
-  binutils_sha512: 20977ad17729141a2c26d358628f44a0944b84dcfefdec2ba029c2d02f40dfc41cc91c0631044560d2bd6f9a51e1f15846b4b311befbe14f1239f14ff7d57824
+  binutils_version: 2_44
+  binutils_sha256: ce2017e059d63e67ddb9240e9d4ec49c2893605035cd60e92ad53177f4377237
+  binutils_sha512: b85d3bbc0e334cf67a96219d3c7c65fbf3e832b2c98a7417bf131f3645a0307057ec81cd2b29ff2563cec53e3d42f73e2c60cc5708e80d4a730efdcc6ae14ad7
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
   gcc_version: 14.2.0
@@ -30,9 +30,9 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.23.6
-  golang_sha256: 039c5b04e65279daceee8a6f71e70bd05cf5b801782b6f77c6e19e2ed0511222
-  golang_sha512: c504476d42cdbcd1b6afe53c0974e82c19eb0efac974bc06d41c1641440676891cfe6416455a0cfc81fe82902a9b82ea0a1d95089c676667d05487e45f5e04e3
+  golang_version: 1.24.0
+  golang_sha256: d14120614acb29d12bcab72bd689f257eb4be9e0b6f88a8fb7e41ac65f8556e5
+  golang_sha512: 36ba9a3a541208fd33aa49b969d892578e209570541d2b6ca6ff784250d8b6777597d347b823c6026acf0c2741b4abc9012693004e623a1434b06cfecdbebaa8
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
   mpc_version: 1.3.1
@@ -40,9 +40,9 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.12.1
-  linux_sha256: 0193b1d86dd372ec891bae799f6da20deef16fc199f30080a4ea9de8cef0c619
-  linux_sha512: c7523dc5b012367301ab43a685b766dce025c4993041acd3dacd085b052b3fccc7f50c892357acf481e24ccad512770ef46a13d2da16c2a178c44a27f7022932
+  linux_version: 6.12.13
+  linux_sha256: f3ebdeea9e555b4cface44e29670056f4024541e6bd222fbcf776c818974fbba
+  linux_sha512: 3c9a8c8716f73a732f50b380c58dd08913905120aaf5f12312eb790d9c2f1f3ca08c148e2eb02a2ceb401ada0d85b328909cbf45961c6b2cb5581d365a24f00b
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.5
@@ -59,8 +59,8 @@ vars:
   stagex_diffutils_version: 3.10
   stagex_gcc_sha256: e56482e2e72b892a2c7faa9ef6ba2b37506695990aa139aa8fa8c1b2e90e5117
   stagex_gcc_version: 13.1.0
-  stagex_go_sha256: 0298fd82defbb8266a6dd44024ca484c22a6e89226ad9b1a6c1fb9eea9258abd
-  stagex_go_version: 1.23.5
+  stagex_go_sha256: 7688add32cb34e13778ea4bf1afef1ad051324bd352d78e8c3868b1a70d7fbb3
+  stagex_go_version: 1.23.6
   stagex_make_sha256: e36f3612c4788a3ff17312a3480228ae7b8edb2cdcba577fe3cc3db1ed5a4ee8
   stagex_make_version: 4.4
   stagex_musl_sha256: 63f3f84b0ff9827cf4345c722b562ede24fbe61e4ea28ffa9e6d12a3dfe8b90e

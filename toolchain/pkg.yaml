@@ -5,19 +5,18 @@ dependencies:
   - stage: binutils
   - stage: gcc
   - stage: linux-headers
-  - stage: musl
+  - stage: toolchain-musl
   - stage: make
   - stage: golang
-# TODO: run this test once we figure out the best way to not let temporary files into the final image
-# steps:
-#   - test:
-#     - |
-#       echo 'int main(){}' > dummy.c
-#       cc dummy.c
-#       ./a.out
-#       echo -e 'package main\nfunc main() {}' > dummy.go
-#       /go/bin/go build dummy.go
-#       ./dummy
+steps:
+  - test:
+    - |
+      echo 'int main(){}' > dummy.c
+      cc dummy.c
+      ./a.out
+      echo -e 'package main\nfunc main() {}' > dummy.go
+      go build dummy.go
+      ./dummy
 finalize:
   - from: /
     to: /
