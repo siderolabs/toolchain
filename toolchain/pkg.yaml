@@ -9,6 +9,24 @@ dependencies:
   - stage: make
   - stage: golang
 steps:
+  - build:
+    - |
+      # Check usrmerge symlinks are in place and point to directories
+      mkdir -p /usr/bin /usr/lib
+      [ -L /bin ] && [ -d /bin ]
+      [ -L /lib ] && [ -d /lib ]
+      [ -L /lib64 ] && [ -d /lib64 ]
+      [ -L /usr/lib64 ] && [ -d /usr/lib64 ]
+    - |
+      # Ensure sbin either doesn't exist or is empty, so we don't lose any executables
+      [ ! -e /sbin ] || [ -z "$(ls -A /sbin 2>/dev/null)" ]
+      [ ! -e /usr/sbin ] || [ -z "$(ls -A /usr/sbin 2>/dev/null)" ]
+      rm -rf /sbin
+      rm -rf /usr/sbin
+    - |
+      # /usr/sbin -> /usr/bin
+      ln -sT usr/bin /sbin
+      ln -sT bin /usr/sbin
   - test:
     - |
       echo 'int main(){}' > dummy.c
