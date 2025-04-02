@@ -14,7 +14,7 @@ vars:
   gcc_sha512: 932bdef0cda94bacedf452ab17f103c0cb511ff2cec55e9112fc0328cbf1d803b42595728ea7b200e0a057c03e85626f937012e49a7515bc5dd256b2bf4bc396
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpfr/mpfr.git
-  mpfr_version: 4.2.1
+  mpfr_version: 4.2.2
   mpfr_sha256: 277807353a6726978996945af13e52829e3abd7a9a5b7fb2793894e18f1fcbb2
   mpfr_sha512: bc68c0d755d5446403644833ecbb07e37360beca45f474297b5d5c40926df1efc3e2067eecffdf253f946288bcca39ca89b0613f545d46a9e767d1d4cf358475
 
@@ -30,7 +30,7 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.24.1
+  golang_version: 1.24.2
   golang_sha256: 8244ebf46c65607db10222b5806aeb31c1fcf8979c1b6b12f60c677e9a3c0656
   golang_sha512: a924d6bdc7e7101917e6d063bc7b471390525394e79224c152997564657c4362b5600e0c8bf6ee857d345129ccf7368bdf4ed2251ab740446ea2abda144e6353
 
@@ -40,7 +40,7 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.12.13
+  linux_version: 6.12.21
   linux_sha256: f3ebdeea9e555b4cface44e29670056f4024541e6bd222fbcf776c818974fbba
   linux_sha512: 3c9a8c8716f73a732f50b380c58dd08913905120aaf5f12312eb790d9c2f1f3ca08c148e2eb02a2ceb401ada0d85b328909cbf45961c6b2cb5581d365a24f00b
 
