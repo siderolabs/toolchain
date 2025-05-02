@@ -8,6 +8,7 @@ dependencies:
   - stage: toolchain-musl
   - stage: make
   - stage: golang
+  - stage: golang123
 steps:
   - build:
     - |
