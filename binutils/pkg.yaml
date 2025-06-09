@@ -4,7 +4,7 @@ dependencies:
   - stage: bootstrap-c-toolchain
 steps:
   - sources:
-      - url: https://ftp.gnu.org/gnu/binutils/binutils-{{ .binutils_version | replace "_" "." }}.tar.xz
+      - url: https://ftpmirror.gnu.org/gnu/binutils/binutils-{{ .binutils_version | replace "_" "." }}.tar.xz
         destination: binutils.tar.xz
         sha256: "{{ .binutils_sha256 }}"
         sha512: "{{ .binutils_sha512 }}"

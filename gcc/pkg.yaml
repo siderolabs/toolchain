@@ -4,19 +4,19 @@ dependencies:
   - stage: bootstrap-c-toolchain
 steps:
   - sources:
-      - url: https://ftp.gnu.org/gnu/gcc/gcc-{{ .gcc_version }}/gcc-{{ .gcc_version }}.tar.xz
+      - url: https://ftpmirror.gnu.org/gnu/gcc/gcc-{{ .gcc_version }}/gcc-{{ .gcc_version }}.tar.xz
         destination: gcc.tar.xz
         sha256: "{{ .gcc_sha256 }}"
         sha512: "{{ .gcc_sha512 }}"
-      - url: https://ftp.gnu.org/gnu/mpfr/mpfr-{{ .mpfr_version }}.tar.xz
+      - url: https://ftpmirror.gnu.org/gnu/mpfr/mpfr-{{ .mpfr_version }}.tar.xz
         destination: mpfr.tar.xz
         sha256: "{{ .mpfr_sha256 }}"
         sha512: "{{ .mpfr_sha512 }}"
-      - url: https://ftp.gnu.org/gnu/gmp/gmp-{{ .gmp_version }}.tar.xz
+      - url: https://ftpmirror.gnu.org/gnu/gmp/gmp-{{ .gmp_version }}.tar.xz
         destination: gmp.tar.xz
         sha256: "{{ .gmp_sha256 }}"
         sha512: "{{ .gmp_sha512 }}"
-      - url: https://ftp.gnu.org/gnu/mpc/mpc-{{ .mpc_version }}.tar.gz
+      - url: https://ftpmirror.gnu.org/gnu/mpc/mpc-{{ .mpc_version }}.tar.gz
         destination: mpc.tar.gz
         sha256: "{{ .mpc_sha256 }}"
         sha512: "{{ .mpc_sha512 }}"

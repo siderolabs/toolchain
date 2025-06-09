@@ -4,7 +4,7 @@ dependencies:
   - stage: bootstrap-c-toolchain
 steps:
   - sources:
-      - url: https://ftp.gnu.org/gnu/make/make-{{ .make_version }}.tar.gz
+      - url: https://ftpmirror.gnu.org/gnu/make/make-{{ .make_version }}.tar.gz
         destination: make.tar.gz
         sha256: "{{ .make_sha256 }}"
         sha512: "{{ .make_sha512 }}"
