@@ -15,3 +15,7 @@ spec:
     - matchPackageNames:
         - git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
       allowedVersions: "<= 6.12"
+---
+kind: common.Repository
+spec:
+  conformMaximumOfOneCommit: false
