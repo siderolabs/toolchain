@@ -38,6 +38,13 @@ steps:
       - mkdir -p /rootfs/usr/bin
       - ln -s /go/bin/go /rootfs/usr/bin/go
       - ln -s /go/bin/gofmt /rootfs/usr/bin/gofmt
+    sbom:
+      outputPath: /rootfs/usr/share/spdx/golang.spdx.json
+      version: {{ .golang_version }}
+      cpes:
+        - cpe:2.3:a:golang:go:{{ .golang_version }}:*:*:*:*:*:*:*
+      licenses:
+        - BSD-3-Clause
 finalize:
   - from: /rootfs
     to: /

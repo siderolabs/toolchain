@@ -42,6 +42,13 @@ steps:
         mv -f /rootfs/usr/lib/libc.so /rootfs/usr/lib/ld-musl-${ARCH}.so.1
         ln -sf ld-musl-${ARCH}.so.1 /rootfs/usr/lib/libc.musl-${ARCH}.so.1
         ln -sf /usr/lib/ld-musl-${ARCH}.so.1 /rootfs/usr/lib/libc.so
+    sbom:
+      outputPath: /rootfs/usr/share/spdx/musl.spdx.json
+      version: {{ .musl_version }}
+      cpes:
+        - cpe:2.3:a:musl-libc:musl:{{ .musl_version }}:*:*:*:*:*:*:*
+      licenses:
+        - MIT
 finalize:
   - from: /rootfs
     to: /
