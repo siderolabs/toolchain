@@ -4,9 +4,9 @@ format: v1alpha2
 
 vars:
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_44
-  binutils_sha256: ce2017e059d63e67ddb9240e9d4ec49c2893605035cd60e92ad53177f4377237
-  binutils_sha512: b85d3bbc0e334cf67a96219d3c7c65fbf3e832b2c98a7417bf131f3645a0307057ec81cd2b29ff2563cec53e3d42f73e2c60cc5708e80d4a730efdcc6ae14ad7
+  binutils_version: 2_45
+  binutils_sha256: c50c0e7f9cb188980e2cc97e4537626b1672441815587f1eab69d2a1bfbef5d2
+  binutils_sha512: c7b10a7466d9fd398d7a0b3f2a43318432668d714f2ec70069a31bdc93c86d28e0fe83792195727167743707fbae45337c0873a0786416db53bbf22860c16ce7
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
   gcc_version: 14.3.0
@@ -30,9 +30,9 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.24.6
-  golang_sha256: e1cb5582aab588668bc04c07de18688070f6b8c9b2aaf361f821e19bd47cfdbd
-  golang_sha512: 65f535c722f4a0f6111c9ed829677621e456a5bc969ccb99009da1ade096b2b1a648a44ccfa913543677c220baeaf1afe634ba8ba165d9474ac9433ac249c914
+  golang_version: 1.25.0
+  golang_sha256: 4bd01e91297207bfa450ea40d4d5a93b1b531a5e438473b2a06e18e077227225
+  golang_sha512: 45030cd02ab0ed4feb74e12ad9dde544bf2255c4d1a48655fca5b643bbe690c75ea3dfac74a0e3e3c707c5af5e9171ae383a7a322e70fe824f9a47b6ffd42201
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
   mpc_version: 1.3.1
