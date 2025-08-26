@@ -9,9 +9,9 @@ vars:
   binutils_sha512: c7b10a7466d9fd398d7a0b3f2a43318432668d714f2ec70069a31bdc93c86d28e0fe83792195727167743707fbae45337c0873a0786416db53bbf22860c16ce7
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
-  gcc_version: 14.3.0
-  gcc_sha256: e0dc77297625631ac8e50fa92fffefe899a4eb702592da5c32ef04e2293aca3a
-  gcc_sha512: cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93
+  gcc_version: 15.2.0
+  gcc_sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
+  gcc_sha512: 89047a2e07bd9da265b507b516ed3635adb17491c7f4f67cf090f0bd5b3fc7f2ee6e4cc4008beef7ca884b6b71dffe2bb652b21f01a702e17b468cca2d10b2de
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpfr/mpfr.git
   mpfr_version: 4.2.2
@@ -40,9 +40,9 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.15.11
-  linux_sha256: 89ab469fc35bd9cbc6c5bf4e5cb802581806d5cbc14fb47e5c9edcc477e65d93
-  linux_sha512: 26b8fd1be75f97f0e7d2a0deb5025b8cbb5c55b99b377678b13f7142b6903ffb7e4f01540517e1ad6945e1aa410817dac33d8f38c48cb959a87e7d6d40163a91
+  linux_version: 6.16.3
+  linux_sha256: 80439ba055c12f541abf44b8fc3c9b825a8f42fc25ce67462ec7e556c5790b85
+  linux_sha512: 4da768f1f36bcafb0ad0c57420c9ef4b62975687e409a2ed5455f03a5e6af3782183d0b6829b50d5f6129d5d1a376fb9c250d2e53f68932eda7140d590ba1615
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.5
@@ -59,12 +59,12 @@ vars:
   stagex_diffutils_version: 3.10
   stagex_gcc_sha256: e56482e2e72b892a2c7faa9ef6ba2b37506695990aa139aa8fa8c1b2e90e5117
   stagex_gcc_version: 13.1.0
-  stagex_go_sha256: 7688add32cb34e13778ea4bf1afef1ad051324bd352d78e8c3868b1a70d7fbb3
-  stagex_go_version: 1.23.6
+  stagex_go_sha256: 0669b11ba9eb54d4d24e2465e06b0955c0d4fb3d7a6362d31e71036e81964989
+  stagex_go_version: 1.24.4
   stagex_make_sha256: e36f3612c4788a3ff17312a3480228ae7b8edb2cdcba577fe3cc3db1ed5a4ee8
   stagex_make_version: 4.4
-  stagex_musl_sha256: 63f3f84b0ff9827cf4345c722b562ede24fbe61e4ea28ffa9e6d12a3dfe8b90e
-  stagex_musl_version: 1.2.4
+  stagex_musl_sha256: ac9d3d3082d93a4ff1f2624dc149d8372dbcbb919fc163a1d61bb79a938cd205
+  stagex_musl_version: 1.2.5
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/toolchain

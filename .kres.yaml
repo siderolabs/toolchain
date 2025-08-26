@@ -14,4 +14,4 @@ spec:
       versioning: 'regex:^(?<major>\d+)_(?<minor>\d+)_?(?<patch>\d+)?$'
     - matchPackageNames:
         - git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-      allowedVersions: "<= 6.12"
+      allowedVersions: "<= 6.16"
