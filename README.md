@@ -1,6 +1,6 @@
 # toolchain
 
-![Dependency Diagram](/deps.png)
+![Dependency Diagram](/deps.svg)
 
 This repository produces a fully bootstrapped (using [\[Stageˣ\]](https://codeberg.org/stagex/stagex)) base toolchain with the following components:
 
