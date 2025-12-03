@@ -30,9 +30,9 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.25.4
-  golang_sha256: 160043b7f17b6d60b50369436917fda8d5034640ba39ae2431c6b95a889cc98c
-  golang_sha512: 6892c2cadc22bce82250f52c754053a70e9e594ec53754a1bed6b9594e8faffda1a6b052d6e298692948740ac0079697294430a4138a842ea298877449cf01cd
+  golang_version: 1.25.5
+  golang_sha256: 22a5fd0a91efcd28a1b0537106b9959b2804b61f59c3758b51e8e5429c1a954f
+  golang_sha512: 97ec368521253bce610e1e3a6f10460f4a38eba440289553a40ab27afcdf2bb9b426d150ffaa3be8db50e84a00a4eb723a631ebc4f39168bc133bf7b2f1ccf66
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
   mpc_version: 1.3.1
@@ -40,9 +40,9 @@ vars:
   mpc_sha512: 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.17
-  linux_sha256: 9b607166a1c999d8326098121222feb080a20a3253975fcdfa2de96ba7f757a7
-  linux_sha512: 063999d7b819970657f6b7713fdb4173da2065ffdeed7cae197026dbb1edfd7f1d50374f073a1e19ef9686539594824ff6ecb8a930d97c4f272cb12f1c6d8355
+  linux_version: 6.18
+  linux_sha256: 9106a4605da9e31ff17659d958782b815f9591ab308d03b0ee21aad6c7dced4b
+  linux_sha512: 88599ffdec96d150c1feb9b261ba93bb0301a9d0e1ad6bef7aeab1f5372cbfc57d8b43c7e902bd8f76921d1dbd8189663c142ea869e51d0e2b483b150ee00fe0
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.musl-libc.org/musl
   musl_version: 1.2.5
