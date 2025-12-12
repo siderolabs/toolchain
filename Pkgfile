@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.5.4
+# syntax = ghcr.io/siderolabs/bldr:v0.5.6
 
 format: v1alpha2
 
@@ -30,9 +30,9 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.24.9
-  golang_sha256: c72f81ba54fe00efe7f3e7499d400979246881b13b775e9a9bb85541c11be695
-  golang_sha512: f553a6bdafa9e59d33756c99f6180dcb7e51762733f300488cdab1d42b918e0fff87fa42d714a6b667e039dd22e1ea14ef5f6e3eb1c9c215ff620d559a5c091a
+  golang_version: 1.24.11
+  golang_sha256: ffdf97766a4c4b135cd53809713978e9ee1a943b2c8e28ad221a5429de30e210
+  golang_sha512: 9344039d231e50b63f52acbdd6cf2f483a4052d95b5fcc3e8a6d8fde80f0195f66ac5588302809ff0425de4d7c6b428ae842ec33b468c7020873acedbdea16ef
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
   mpc_version: 1.3.1
