@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.5.5
+# syntax = ghcr.io/siderolabs/bldr:v0.5.6
 
 format: v1alpha2
 
@@ -30,9 +30,9 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.24.10
-  golang_sha256: 34000dcc47a517b78fcf2657ee7d033328a57079fe60c4ed8b7b84260d1d19d3
-  golang_sha512: 4fa49b8948ecc9dfe8b18e098f0fef4226eeb59ea0bfd266e0bf207bfd06a51e2c4bbf8aa98482e1cdc4c892defa4de2afcbcd289cb5872dc9c62cd355fbcfbe
+  golang_version: 1.24.11
+  golang_sha256: ffdf97766a4c4b135cd53809713978e9ee1a943b2c8e28ad221a5429de30e210
+  golang_sha512: 9344039d231e50b63f52acbdd6cf2f483a4052d95b5fcc3e8a6d8fde80f0195f66ac5588302809ff0425de4d7c6b428ae842ec33b468c7020873acedbdea16ef
 
   golang123_version: 1.23.12
   golang123_sha256: e1cce9379a24e895714a412c7ddd157d2614d9edbe83a84449b6e1840b4f1226
