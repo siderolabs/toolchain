@@ -1,8 +1,8 @@
 name: golang
 variant: scratch
 dependencies:
-  - image: "{{ .stagex_prefix }}/core-busybox:{{ .stagex_busybox_version }}@sha256:{{ .stagex_busybox_sha256 }}"
-  - image: "{{ .stagex_prefix }}/core-go:{{ .stagex_go_version }}@sha256:{{ .stagex_go_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-busybox:{{ .stagex_version }}@sha256:{{ .stagex_busybox_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-go:{{ .stagex_version }}@sha256:{{ .stagex_go_sha256 }}"
 steps:
   - sources:
       - url: https://dl.google.com/go/go{{ .golang_version }}.src.tar.gz

@@ -1,7 +1,7 @@
 name: toolchain
 variant: scratch
 dependencies:
-  - image: "{{ .stagex_prefix }}/core-busybox:{{ .stagex_busybox_version }}@sha256:{{ .stagex_busybox_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-busybox:{{ .stagex_version }}@sha256:{{ .stagex_busybox_sha256 }}"
   - stage: binutils
   - stage: gcc
   - stage: linux-headers

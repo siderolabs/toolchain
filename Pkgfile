@@ -4,9 +4,9 @@ format: v1alpha2
 
 vars:
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
-  binutils_version: 2_45_1
-  binutils_sha256: 5fe101e6fe9d18fdec95962d81ed670fdee5f37e3f48f0bef87bddf862513aa5
-  binutils_sha512: ea030419eba387579ab717be7e3223fc99e93b586860b06003c12489f93441640d4082736f76aa5e98233db4f46e232f536a45e471486de1f5b64e1b827c167e
+  binutils_version: 2_46_0
+  binutils_sha256: d75a94f4d73e7a4086f7513e67e439e8fcdcbb726ffe63f4661744e6256b2cf2
+  binutils_sha512: 32f880bb4f69351f4ae54a5d00359625c6c49d8e76624fb5cffdf174c79c8d3212f66225b81c12933c6ed59604ab652560773dd92fab384b930c97a9d4e1fdf2
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
   gcc_version: 15.2.0
@@ -30,9 +30,9 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.25.7
-  golang_sha256: 178f2832820274b43e177d32f06a3ebb0129e427dd20a5e4c88df2c1763cf10a
-  golang_sha512: 054fdb8219d18a7942c524d8acc3c942d0a7b8f1c01b96184fa79017b6548533798f5f48cc78f7ecfb70da504c5c66569377a35d517a0e3184c32fe84c9ee0b6
+  golang_version: 1.26.0
+  golang_sha256: c9132a8a1f6bd2aa4aad1d74b8231d95274950483a4950657ee6c56e6e817790
+  golang_sha512: 93858b64ef0f0963af4efa5f7a0465e76827b80a9926e965da6abeb2ad1b261bcfb3c1911364edd8bc2488fda47cc56e13816b4d7174413b17656b681c139964
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
   mpc_version: 1.3.1
@@ -51,20 +51,14 @@ vars:
 
   # Stage(x) reproducibly built bootstrap toolchain. Please update when necessary to build newer toolchain
   stagex_prefix: ghcr.io/siderolabs/stagex
-  stagex_binutils_sha256: b4c8c1b077ed483885db0d7d29c9a6efa574cda71629970f0c753f51ef0046ee
-  stagex_binutils_version: 2.43.1
-  stagex_busybox_sha256: c0b551b47d8f1ac2fd5f4712eafddb8717e6e563a47203e02f94f944f64c18b2
-  stagex_busybox_version: 1.36.1
-  stagex_diffutils_sha256: 697119e6231be9c3e3dcd5c6f04cb8bfdf9178a86ce03433d0f442793b6ac43d
-  stagex_diffutils_version: 3.10
-  stagex_gcc_sha256: e56482e2e72b892a2c7faa9ef6ba2b37506695990aa139aa8fa8c1b2e90e5117
-  stagex_gcc_version: 13.1.0
-  stagex_go_sha256: 0669b11ba9eb54d4d24e2465e06b0955c0d4fb3d7a6362d31e71036e81964989
-  stagex_go_version: 1.24.4
-  stagex_make_sha256: e36f3612c4788a3ff17312a3480228ae7b8edb2cdcba577fe3cc3db1ed5a4ee8
-  stagex_make_version: 4.4
-  stagex_musl_sha256: ac9d3d3082d93a4ff1f2624dc149d8372dbcbb919fc163a1d61bb79a938cd205
-  stagex_musl_version: 1.2.5
+  stagex_version: 2025.10.0
+  stagex_binutils_sha256: 8aba9a9945ac5aafd4644e3e51d6a8f62b280ae61d34b7c9ed63a338f51478e1
+  stagex_busybox_sha256: b10d70a9e4436557013da17e55218f16493128a88f1a56aafe877946d72340b3
+  stagex_diffutils_sha256: dac8cecddf6f4ff7f0729880835f58a1addc3d3b66d567e6d0536c58b4b52ff3
+  stagex_gcc_sha256: d5b2d328465121e7246469f3b3c589e574fe584fb7886ee3bb44ab301cc8c134
+  stagex_go_sha256: 87b785f4b8d645970fca12a18617d10d28413c638e76bd96e70f912332767128
+  stagex_make_sha256: 94affe8c306813b5ff6fce975c5e640d27b8c903a8d659a494f4c763d30b54c0
+  stagex_musl_sha256: 30ae57bdb93b7329e4bfe8df957fbe8b3f5806cb10b4245aafc39d04842f9481
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/toolchain

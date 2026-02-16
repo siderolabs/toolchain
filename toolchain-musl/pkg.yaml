@@ -2,7 +2,7 @@ name: toolchain-musl
 variant: scratch
 dependencies:
   - stage: bootstrap-c-toolchain
-  - image: "{{ .stagex_prefix }}/core-diffutils:{{ .stagex_diffutils_version }}@sha256:{{ .stagex_diffutils_sha256 }}"
+  - image: "{{ .stagex_prefix }}/core-diffutils:{{ .stagex_version }}@sha256:{{ .stagex_diffutils_sha256 }}"
 steps:
   - sources:
       - url: https://www.musl-libc.org/releases/musl-{{ .musl_version }}.tar.gz
