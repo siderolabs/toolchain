@@ -20,6 +20,7 @@ steps:
 
         patch -p1 < /pkg/patches/handle-aux-at-base.patch
         patch -p1 < /pkg/patches/close-range.patch
+        patch -p1 < /pkg/patches/gb-iconv.patch
 
         mkdir build
         cd build
