@@ -16,8 +16,8 @@ steps:
         destination: gmp.tar.xz
         sha256: "{{ .gmp_sha256 }}"
         sha512: "{{ .gmp_sha512 }}"
-      - url: https://ftpmirror.gnu.org/gnu/mpc/mpc-{{ .mpc_version }}.tar.gz
-        destination: mpc.tar.gz
+      - url: https://ftpmirror.gnu.org/gnu/mpc/mpc-{{ .mpc_version }}.tar.xz
+        destination: mpc.tar.xz
         sha256: "{{ .mpc_sha256 }}"
         sha512: "{{ .mpc_sha512 }}"
     prepare:
@@ -29,7 +29,7 @@ steps:
         tar -xJf gmp.tar.xz --strip-components=1 -C gmp
 
         mkdir mpc
-        tar -xzf mpc.tar.gz --strip-components=1 -C mpc
+        tar -xJf mpc.tar.xz --strip-components=1 -C mpc
 
         tar -xJf gcc.tar.xz --strip-components=1
         mkdir build
