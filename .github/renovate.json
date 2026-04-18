@@ -8,6 +8,12 @@
         ":semanticCommitScopeDisabled",
         "schedule:earlyMondays"
     ],
+    "customDatasources": {
+        "gmp": {
+            "defaultRegistryUrlTemplate": "https://ftp.gnu.org/gnu/gmp/",
+            "format": "html"
+        }
+    },
     "customManagers": [
         {
             "customType": "regex",
