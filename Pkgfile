@@ -19,9 +19,9 @@ vars:
   mpfr_sha512: eb9e7f51b5385fb349cc4fba3a45ffdf0dd53be6dfc74932dc01258158a10514667960c530c47dd9dfc5aa18be2bd94859d80499844c5713710581e6ac6259a9
 
   # renovate: datasource=custom.gmp extractVersion=^gmp-(?<version>.+)\.tar\.xz$ depName=gmp
-  gmp_version: 6.2.1
-  gmp_sha256: fd4829912cddd12f84181c3451cc752be224643e87fac497b69edddadc49b4f2
-  gmp_sha512: c99be0950a1d05a0297d65641dd35b75b74466f7bf03c9e8a99895a3b2f9a0856cd17887738fa51cf7499781b65c049769271cbcb77d057d2e9f1ec52e07dd84
+  gmp_version: 6.3.0
+  gmp_sha256: a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898
+  gmp_sha512: e85a0dab5195889948a3462189f0e0598d331d3457612e2d3350799dba2e244316d256f8161df5219538eb003e4b5343f989aaa00f96321559063ed8c8f29fd2
 
   # renovate: datasource=git-tags depName=git://git.savannah.gnu.org/make.git
   make_version: 4.4.1
@@ -34,9 +34,9 @@ vars:
   golang_sha512: 370773727c0e6fbf0acd534726938aaaa03ff785f0634c258c94a7a896e9a27acc0ba57120967f711a942e9e275cec46251a194d6f84ba15f28b5dcf0efed673
 
   # renovate: datasource=git-tags depName=https://gitlab.inria.fr/mpc/mpc.git
-  mpc_version: 1.4.0
-  mpc_sha256: 3210b3a546b1cb00c296ca360891d7740ee6ff06deb02a27a35b20cd3c0bb1a5
-  mpc_sha512: de297e434b05905101b5a860e732b598da82129bdc28e3efebc0b36a107b6f2f4ae6962f55921ee20193df1dab241caf74dfc5d4dc1ae4b4edefbbcfe5b9c762
+  mpc_version: 1.4.1
+  mpc_sha256: 91204cd32f164bd3b7c992d4a6a8ce6519511aadab30f78b6982d0bf8d73e931
+  mpc_sha512: cdfbe64e80e30df64dbd536e8104a6bb10471582415d5b45a1dd30eb2a312781b38389a9531243413c14e0f88866a35159b20e77900718f28c1030253a1305b9
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
   linux_version: 6.18.23
