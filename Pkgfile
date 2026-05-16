@@ -9,7 +9,7 @@ vars:
   binutils_sha512: 32f880bb4f69351f4ae54a5d00359625c6c49d8e76624fb5cffdf174c79c8d3212f66225b81c12933c6ed59604ab652560773dd92fab384b930c97a9d4e1fdf2
 
   # renovate: datasource=git-tags extractVersion=^releases/gcc-(?<version>.*)$ depName=git://gcc.gnu.org/git/gcc.git
-  gcc_version: 15.2.0
+  gcc_version: 16.1.0
   gcc_sha256: 438fd996826b0c82485a29da03a72d71d6e3541a83ec702df4271f6fe025d24e
   gcc_sha512: 89047a2e07bd9da265b507b516ed3635adb17491c7f4f67cf090f0bd5b3fc7f2ee6e4cc4008beef7ca884b6b71dffe2bb652b21f01a702e17b468cca2d10b2de
 
@@ -39,7 +39,7 @@ vars:
   mpc_sha512: cdfbe64e80e30df64dbd536e8104a6bb10471582415d5b45a1dd30eb2a312781b38389a9531243413c14e0f88866a35159b20e77900718f28c1030253a1305b9
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.18.23
+  linux_version: 6.18.31
   linux_sha256: 2a2d8e76bfcd135ab861bb9795211574eeff6d4ede9cc920f7c137587e835134
   linux_sha512: d10cb85ab550e8db2516f360f7c359f6fcc574652ddbe2960cddc8ece74a49b52d315a28b2759cd5df3ef0acb3b23d9bf73427667c3dc6333fcc5436006fc0ee
 
