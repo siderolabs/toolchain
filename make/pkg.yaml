@@ -15,7 +15,8 @@ steps:
         cd build
         ../configure \
             --prefix=/usr \
-            --without-guile
+            --without-guile \
+            CFLAGS="${CFLAGS} -std=gnu17"
     build:
       - |
         cd build

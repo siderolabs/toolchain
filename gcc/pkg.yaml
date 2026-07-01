@@ -62,6 +62,8 @@ steps:
         --disable-libsanitizer \
         --disable-libmpx \
         --disable-lto-plugin \
+        --without-isl \
+        --without-zstd \
         --disable-libssp \
         --disable-bootstrap
     build:
