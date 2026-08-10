@@ -5,6 +5,12 @@ spec:
     - toolchain
     - toolchain-musl
   reproducibleTargetName: toolchain
+  extraBuildArgs:
+    - GNU_MIRROR_URL
+  makefile:
+    extraVariables:
+      - name: GNU_MIRROR_URL
+        defaultValue: https://mirrors.kernel.org
 ---
 kind: common.Renovate
 spec:
