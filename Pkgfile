@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.6.2
+# syntax = ghcr.io/siderolabs/bldr:v0.6.3
 
 format: v1alpha2
 
@@ -29,7 +29,7 @@ vars:
   make_sha512: 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 
   # renovate: datasource=github-tags extractVersion=^go(?<version>.*)$ depName=golang/go
-  golang_version: 1.26.7
+  golang_version: 1.27.0
   golang_sha256: 0ed24eac755105085b89fe9cabc2742b91a0ad7b94b59d3ad364918ebc8956ad
   golang_sha512: 708c8f19d43c7f931287ee0c710eb7a0c4a3d7589f546a59fcdb276f2963d8eb1fba1599977613e751d6de95b8386b6bca8e7d2caf9c555a1d51d1ef0d40289b
 
@@ -39,7 +39,7 @@ vars:
   mpc_sha512: cdfbe64e80e30df64dbd536e8104a6bb10471582415d5b45a1dd30eb2a312781b38389a9531243413c14e0f88866a35159b20e77900718f28c1030253a1305b9
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.18.44
+  linux_version: 6.18.45
   linux_sha256: 0f72d938f06828e82c90405174fe572287db7bfe089e2fc46572a99a7f240d43
   linux_sha512: cb710375eb0dccdb8ac49db46517556b9e6d56d7ed5430336158cc63b6104366672964737508819ef49de03c9a7a02079027f2271748c6677bc7c32944631589
 
